@@ -3,12 +3,12 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
   const { email, password, message } = req.body;
-  console.log(email, password, message);
+  console.log("req.body: ", email, password, message);
 
   const msg = {
-    to: "fsalc004@gmail.com",
+    to: "fsalc004@fiu.edu",
     from: "fsalcedo55@hotmail.com", // Use the email address or domain you verified above
-    subject: "Sending with Twilio SendGrid is Fun",
+    subject: `You've received an email from ${req.body.fullname}`,
     html: "<strong>and easy to do anywhere, even with Node.js</strong>",
   };
 

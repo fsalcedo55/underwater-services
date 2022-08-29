@@ -1,48 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import {
-  GiBoatPropeller,
-  GiBrickWall,
-  GiGlassBall,
-  GiFallingRocks,
-} from "react-icons/gi";
-import { MdCleaningServices } from "react-icons/md";
-import { IoMdBoat } from "react-icons/io";
 import Contact from "../components/contact";
 import Link from "next/link";
-
-const services = [
-  {
-    name: "Propellers",
-    icon: <GiBoatPropeller />,
-    href: "/services/propellers",
-  },
-  {
-    name: "Seawall Maintenance",
-    icon: <GiBrickWall />,
-    href: "/services/waterfront-maintenance",
-  },
-  {
-    name: "Underwater Inspections",
-    icon: <IoMdBoat />,
-    href: "/services/underwater-inspections",
-  },
-  {
-    name: "Bottom Cleaning",
-    icon: <MdCleaningServices />,
-    href: "/services/bottom-cleaning",
-  },
-  {
-    name: "Structural Fiberglass Repairs",
-    icon: <GiGlassBall />,
-    href: "/services/structural-fiberglass-repairs",
-  },
-  {
-    name: "Dredging and Rock Removal",
-    icon: <GiFallingRocks />,
-    href: "/services/dredging-and-rock-removal",
-  },
-];
+import { services } from "./services/services";
 
 export default function Home() {
   return (
@@ -87,7 +47,7 @@ export default function Home() {
               alt="Seacraft Marine Repair"
               width="550"
               height="550"
-              className="rounded-lg"
+              className="rounded-lg drop-shadow"
             />
           </div>
         </div>

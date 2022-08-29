@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
             className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
             id="mobile-menu-language-select"
           >
-            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white md">
+            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:border-0 md:bg-white md">
               <li>
                 <a
                   href="#"
@@ -72,7 +72,7 @@ const Layout = ({ children }) => {
       </nav>
 
       <main className="flex-1 bg-gradient-to-b from-gray-50 to-gray-100">
-        <div className="mb-20">{children}</div>
+        <div className="mb-2">{children}</div>
       </main>
       <footer className="text-gray-600 body-font">
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">

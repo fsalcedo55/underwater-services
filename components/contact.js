@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 function Contact() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,8 +24,30 @@ function Contact() {
           message: message,
         }),
       });
+      toast.success("⚓️ We'll be in touch shortly! ⚓️", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+
+      router.push("/");
+      setFullname("");
+      setEmail("");
+      setMessage("");
     } catch (error) {
-      console.log(error);
+      toast.error("Error: Please email fsalcedo55@hotmail.com", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -53,7 +79,7 @@ function Contact() {
 
   return (
     <section className="text-gray-600 body-font relative">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-5 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
             Contact Us
@@ -119,6 +145,7 @@ function Contact() {
               >
                 Submit
               </button>
+              <ToastContainer />
             </div>
           </form>
         </div>
