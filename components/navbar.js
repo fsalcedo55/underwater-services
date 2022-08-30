@@ -55,33 +55,36 @@ export default function Navbar() {
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
                 >
-                  <div className="py-1" role="none">
-                    {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
-                    {services.map((service) => (
-                      <Menu.Item
-                        as="div"
-                        key={service.name}
-                        className="cursor-pointer"
-                      >
-                        {({ active }) => (
-                          <div
-                            className={`${
-                              active
-                                ? "text-white bg-blue-700"
-                                : "text-gray-700"
-                            } block px-4 py-2 text-sm`}
-                          >
-                            <Link href={service.href}>
-                              <div className="flex items-center gap-2">
-                                <span>{service.icon}</span>
-                                <span>{service.name}</span>
-                              </div>
-                            </Link>
-                          </div>
-                        )}
-                      </Menu.Item>
-                    ))}
-                  </div>
+                  {/* <div className="py-1" role="none"> */}
+                  {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
+                  {services.map((service) => (
+                    <Menu.Item
+                      as="div"
+                      key={service.name}
+                      className="cursor-pointer py-1"
+                      onClick={() => {
+                        router.push({
+                          pathname: service.href,
+                        });
+                      }}
+                    >
+                      {({ active }) => (
+                        <div
+                          className={`${
+                            active ? "text-white bg-blue-700" : "text-gray-700"
+                          } block px-4 py-2 text-sm`}
+                        >
+                          {/* <Link href={service.href}> */}
+                          <a className="flex items-center gap-2">
+                            <span>{service.icon}</span>
+                            <span>{service.name}</span>
+                          </a>
+                          {/* </Link> */}
+                        </div>
+                      )}
+                    </Menu.Item>
+                  ))}
+                  {/* </div> */}
                 </Menu.Items>
               </Menu>
             </li>
