@@ -26,12 +26,15 @@ export default function Home() {
                 </span>{" "}
                 needs
               </h1>
-              <p className="my-4 text-blue-800 text-2xl">+ What we do</p>
-              <div className="grid gap-6 mt-8 sm:grid-cols-2">
+              <div className="h-8"></div>
+              <p className="text-blue-800 text-2xl">+ Some things we do</p>
+              <div className="h-8"></div>
+
+              <div className="grid gap-6 sm:grid-cols-2">
                 {services.map((service) => (
                   <Link href={service.href} key={service.name}>
                     <div className="flex items-center text-gray-800 p-3 hover:bg-blue-800 hover:text-white rounded-lg cursor-pointer ">
-                      <div className="w-5 h-5">{service.icon}</div>
+                      <div className="w-5 h-5 text-2xl">{service.icon}</div>
 
                       <span className="mx-3">{service.name}</span>
                     </div>

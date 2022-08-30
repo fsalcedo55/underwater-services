@@ -13,11 +13,13 @@ export const services = [
     icon: <GiBoatPropeller />,
     href: "/services/propellers",
     photo: "/propeller.jpg",
+    description:
+      "We provide underwater removal or installtion services of propellers without the need for expensive haul outs.",
   },
   {
     name: "Seawall Maintenance",
     icon: <GiBrickWall />,
-    href: "/services/waterfront-maintenance",
+    href: "/services/seawall-maintenance",
     photo: "/Seawall-Repair.png",
   },
   {
@@ -30,18 +32,18 @@ export const services = [
     name: "Bottom Cleaning",
     icon: <MdCleaningServices />,
     href: "/services/bottom-cleaning",
-    photo: "/propeller.jpg",
+    photo: "/hull_cleaning.jpeg",
   },
   {
     name: "Structural Fiberglass Repairs",
     icon: <GiGlassBall />,
     href: "/services/structural-fiberglass-repairs",
-    photo: "/propeller.jpg",
+    photo: "/fiberglass-repair.jpeg",
   },
   {
     name: "Dredging and Rock Removal",
     icon: <GiFallingRocks />,
     href: "/services/dredging-and-rock-removal",
-    photo: "/propeller.jpg",
+    photo: "/underwater-dredging-melbourne-1.jpeg",
   },
 ];
