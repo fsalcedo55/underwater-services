@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
-import { services } from "../pages/services/services";
+import { services } from "../data/services";
 
 function Contact() {
   const [fullname, setFullname] = useState("");

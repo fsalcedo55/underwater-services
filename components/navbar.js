@@ -1,12 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Menu } from "@headlessui/react";
-import { services } from "../pages/services/services";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { useRouter } from "next/router";
+import Link from "next/link"
+import Image from "next/image"
+import { useRouter } from "next/router"
+import DropdownMenu from "./dropdownMenu"
 
 export default function Navbar() {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <nav className="bg-white sm:px-4 py-3 drop-shadow">
@@ -40,53 +38,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Menu as="div" className="relative">
-                <Menu.Button className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
-                  <div className="flex items-center gap-1">
-                    <span>Services</span>
-                    <span className="text-lg">
-                      <MdKeyboardArrowDown />
-                    </span>
-                  </div>
-                </Menu.Button>
-                <Menu.Items
-                  className="absolute right-0 mt-2 w-64 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="menu-button"
-                >
-                  {/* <div className="py-1" role="none"> */}
-                  {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
-                  {services.map((service) => (
-                    <Menu.Item
-                      as="div"
-                      key={service.name}
-                      className="cursor-pointer py-1"
-                      onClick={() => {
-                        router.push({
-                          pathname: service.href,
-                        });
-                      }}
-                    >
-                      {({ active }) => (
-                        <div
-                          className={`${
-                            active ? "text-white bg-blue-700" : "text-gray-700"
-                          } block px-4 py-2 text-sm`}
-                        >
-                          {/* <Link href={service.href}> */}
-                          <a className="flex items-center gap-2">
-                            <span>{service.icon}</span>
-                            <span>{service.name}</span>
-                          </a>
-                          {/* </Link> */}
-                        </div>
-                      )}
-                    </Menu.Item>
-                  ))}
-                  {/* </div> */}
-                </Menu.Items>
-              </Menu>
+              <DropdownMenu />
             </li>
 
             <li>
@@ -117,5 +69,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

@@ -1,8 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import Contact from "../components/contact";
-import Link from "next/link";
-import { services } from "./services/services";
+import Head from "next/head"
+import Image from "next/image"
+import Contact from "../components/contact"
+import Link from "next/link"
+import { services } from "../data/services"
+import Tabs from "../components/tabs"
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
               <p className="text-blue-800 text-2xl">+ Some things we do</p>
               <div className="h-8"></div>
 
-              <div className="grid gap-6 sm:grid-cols-2">
+              {/* <div className="grid gap-6 sm:grid-cols-2">
                 {services.map((service) => (
                   <Link href={service.href} key={service.name}>
                     <div className="flex items-center text-gray-800 p-3 hover:bg-blue-800 hover:text-white rounded-lg cursor-pointer ">
@@ -40,7 +41,8 @@ export default function Home() {
                     </div>
                   </Link>
                 ))}
-              </div>
+              </div> */}
+              <Tabs />
             </div>
           </div>
 
@@ -64,5 +66,5 @@ export default function Home() {
       </main>
       <Contact />
     </div>
-  );
+  )
 }

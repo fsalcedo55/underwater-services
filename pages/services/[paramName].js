@@ -1,23 +1,31 @@
-import Head from "next/head";
-import Image from "next/image";
-import { services } from "../pages/services/services";
+import { useRouter } from "next/router"
+import { nestedServices } from "../../data/services"
+import Image from "next/image"
+import Head from "next/head"
 
-export const ServiceContent = ({ title }) => {
-  const currService = services.find((service) => service.name === title);
+const ServicePage = () => {
+  const router = useRouter()
+  const { paramName } = router.query
+
+  const values1 = Object.values(nestedServices)[0]
+  const values2 = Object.values(nestedServices)[1]
+  const values = values1.concat(values2)
+
+  const currService = values.find((service) => service.paramName === paramName)
+
   return (
     <div>
       <Head>
-        <title>{title}</title>
-        <meta name={title} content="Seamaster Marine Repair" />
+        <title>{currService.name}</title>
+        <meta name={currService.name} content="Seamaster Marine Repair" />
       </Head>
-      {/* <div className="text-xl font-bold text-gray-800 lg:text-3xl">{title}</div> */}
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
               <div className="flex items-center text-gray-900 text-3xl title-font font-medium mb-4 gap-4">
                 <div>{currService.icon}</div>
-                <h1>{title}</h1>
+                <h1>{currService.name}</h1>
               </div>
               <div className="flex mb-4">
                 <a className="flex-grow text-blue-600 border-b-2 border-blue-600 py-2 text-lg px-1">
@@ -30,7 +38,7 @@ export const ServiceContent = ({ title }) => {
                   Details
                 </a>
               </div>
-              <p className="leading-relaxed mb-4">
+              <div className="leading-relaxed mb-4">
                 {currService.description ? (
                   currService.description
                 ) : (
@@ -42,7 +50,7 @@ export const ServiceContent = ({ title }) => {
                     bottle austin listicle pour-over, neutra jean.
                   </p>
                 )}
-              </p>
+              </div>
               <div className="flex border-t border-gray-200 py-2">
                 <span className="text-gray-500">Color</span>
                 <span className="ml-auto text-gray-900">Blue</span>
@@ -89,5 +97,7 @@ export const ServiceContent = ({ title }) => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
+
+export default ServicePage
