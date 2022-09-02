@@ -2,30 +2,37 @@ import { useRouter } from "next/router"
 import { nestedServices } from "../../data/services"
 import Image from "next/image"
 import Head from "next/head"
+import { useEffect } from "react"
 
 const ServicePage = () => {
   const router = useRouter()
   const { paramName } = router.query
+  const currService = {}
 
-  const values1 = Object.values(nestedServices)[0]
-  const values2 = Object.values(nestedServices)[1]
-  const values = values1.concat(values2)
+  const getData = () => {
+    const values1 = Object.values(nestedServices)[0]
+    const values2 = Object.values(nestedServices)[1]
+    const values = values1.concat(values2)
+    currService = values.find((service) => service.paramName === paramName)
+  }
 
-  const currService = values.find((service) => service.paramName === paramName)
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <div>
       <Head>
-        <title>{currService.name}</title>
-        <meta name={currService.name} content="Seamaster Marine Repair" />
+        <title>{currService?.name}</title>
+        <meta name={currService?.name} content="Seamaster Marine Repair" />
       </Head>
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
               <div className="flex items-center text-gray-900 text-3xl title-font font-medium mb-4 gap-4">
-                <div>{currService.icon}</div>
-                <h1>{currService.name}</h1>
+                <div>{currService?.icon}</div>
+                <h1>{currService?.name}</h1>
               </div>
               <div className="flex mb-4">
                 <a className="flex-grow text-blue-600 border-b-2 border-blue-600 py-2 text-lg px-1">
@@ -39,8 +46,8 @@ const ServicePage = () => {
                 </a>
               </div>
               <div className="leading-relaxed mb-4">
-                {currService.description ? (
-                  currService.description
+                {currService?.description ? (
+                  currService?.description
                 ) : (
                   <p>
                     Fam locavore kickstarter distillery. Mixtape chillwave
@@ -88,7 +95,7 @@ const ServicePage = () => {
               <Image
                 alt="miami boat propeller"
                 className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg"
-                src={currService.photo}
+                src={currService?.photo}
                 width={500}
                 height={500}
               />
