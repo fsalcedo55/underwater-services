@@ -2,6 +2,7 @@ import { Menu } from "@headlessui/react"
 import { nestedServices } from "../data/services"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import { useRouter } from "next/router"
+import { iconHelper } from "../utils/iconHelper"
 
 export default function DropdownMenu() {
   const router = useRouter()
@@ -46,7 +47,9 @@ export default function DropdownMenu() {
                     } block px-4 py-2 text-sm rounded-lg`}
                   >
                     <a className="flex items-center gap-2">
-                      <span className="text-xl">{service.icon}</span>
+                      <span className="text-xl">
+                        {iconHelper(service.name)}
+                      </span>
                       <span>{service.name}</span>
                     </a>
                   </div>

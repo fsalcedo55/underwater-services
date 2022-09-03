@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Tab } from "@headlessui/react"
 import { nestedServices } from "../data/services"
 import Link from "next/link"
+import { iconHelper } from "../utils/iconHelper"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -19,7 +20,7 @@ export default function Tabs() {
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
+                  "w-full rounded-lg py-2.5 font-semibold leading-5 text-blue-700",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                   selected
                     ? "bg-white shadow"
@@ -47,7 +48,9 @@ export default function Tabs() {
                     key={service.name}
                   >
                     <div className="flex items-center text-gray-800 p-3 hover:bg-blue-800 hover:text-white rounded-lg cursor-pointer ">
-                      <div className="w-5 h-5 text-2xl">{service.icon}</div>
+                      <div className="w-5 h-5 text-2xl">
+                        {iconHelper(service.name)}
+                      </div>
 
                       <span className="mx-3 text-sm">{service.name}</span>
                     </div>

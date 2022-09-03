@@ -1,8 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
 import Contact from "../components/contact"
-import Link from "next/link"
-import { services } from "../data/services"
 import Tabs from "../components/tabs"
 
 export default function Home() {
