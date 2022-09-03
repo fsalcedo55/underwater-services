@@ -1,19 +1,19 @@
-const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const sgMail = require("@sendgrid/mail")
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default async function handler(req, res) {
-  const { email, password, message } = req.body;
-  console.log("req.body: ", email, password, message);
+  const { email, password, message } = req.body
+  console.log("req.body: ", email, password, message)
 
   const msg = {
-    to: "fsalc004@fiu.edu",
+    to: "fsalcedo55@hotmail.com",
     from: "fsalcedo55@hotmail.com", // Use the email address or domain you verified above
     subject: `You've received an email from ${req.body.fullname}`,
     html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-  };
+  }
 
-  await sgMail.send(msg);
-  res.json({ success: true });
+  await sgMail.send(msg)
+  res.json({ success: true })
 }
 
 // import sendgrid from "@sendgrid/mail";

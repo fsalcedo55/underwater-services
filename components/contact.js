@@ -1,25 +1,27 @@
-import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useRouter } from "next/router";
-import { services } from "../data/services";
+import { useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { useRouter } from "next/router"
+import { services } from "../data/services"
 
 function Contact() {
-  const [fullname, setFullname] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [servicesArr, setServicesArr] = useState([]);
-  const router = useRouter();
+  const [fullname, setFullname] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [servicesArr, setServicesArr] = useState([])
+  const router = useRouter()
+
+  console.log({ fullname }, { email }, { message })
 
   const resetState = () => {
-    setFullname("");
-    setEmail("");
-    setMessage("");
-    router.push("/");
-  };
+    setFullname("")
+    setEmail("")
+    setMessage("")
+    router.push("/")
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       await fetch("/api/sendgrid", {
         method: "POST",
@@ -31,7 +33,7 @@ function Contact() {
           email: email,
           message: message,
         }),
-      });
+      })
       toast.success("We'll be in touch shortly! 🫡", {
         position: "top-center",
         autoClose: 5000,
@@ -40,7 +42,7 @@ function Contact() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-      });
+      })
     } catch (error) {
       toast.error("Error: Please email fersaldiver@hotmail.com", {
         position: "top-center",
@@ -50,10 +52,10 @@ function Contact() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-      });
+      })
     }
-    resetState();
-  };
+    resetState()
+  }
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
@@ -85,10 +87,10 @@ function Contact() {
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-5 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <h1 className="sm:text-3xl lg:text-6xl text-2xl font-bold  title-font mb-4 text-gray-800">
             Contact Us
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base lg:text-lg">
             Let&apos;s get you back on the water as soon as possible
           </p>
         </div>
@@ -106,7 +108,7 @@ function Contact() {
                   type="text"
                   value={fullname}
                   onChange={(e) => setFullname(e.target.value)}
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-200 bg-opacity-50 rounded-lg border-2 border-gray-300 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -122,7 +124,7 @@ function Contact() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-200 bg-opacity-50 rounded-lg border-2 border-gray-300 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -172,16 +174,18 @@ function Contact() {
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-200 bg-opacity-50 rounded-lg border-2 border-gray-300 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
             </div>
             <div className="p-2 w-full">
               <button
                 // type="submit"
-                className="flex mx-auto text-white bg-blue-700 border-0 py-2 px-8 focus:outline-none hover:bg-blue-900 rounded text-lg"
+                className="flex my-2 mx-auto text-white bg-blue-500 border-0 py-4 px-10 focus:outline-none hover:bg-blue-700 rounded-xl text-lg font-semibold lg:text-xl hover:shadow-lg hover:shadow-cyan-500/50"
               >
-                Submit
+                <span className="transform transition duration-500 hover:scale-105">
+                  Submit Your Inquiry
+                </span>
               </button>
               <ToastContainer />
             </div>
@@ -189,7 +193,7 @@ function Contact() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

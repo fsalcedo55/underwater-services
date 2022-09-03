@@ -1,8 +1,8 @@
-import Navbar from "./navbar";
-import Image from "next/image";
+import Navbar from "./navbar"
+import Image from "next/image"
 
 const Layout = ({ children }) => {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
   return (
     <div className="min-h-screen flex flex-col">
       <div className="z-50">
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
               width="50"
               height="50"
             />
-            <span className="ml-3 text-xl">SeaMaster Marine Repair</span>
+            <span className="ml-3 text-xl">Seamaster Marine Repair</span>
           </a>
           <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
             © <span>{year}</span> All Rights Reserved
@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

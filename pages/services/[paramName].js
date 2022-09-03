@@ -9,12 +9,12 @@ const values = values1.concat(values2)
 
 export async function getStaticPaths() {
   const paths = values.map((service) => ({
-    params: { paramName: service.paramName.toString() },
+    params: { paramName: service.paramName },
   }))
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
 
@@ -37,7 +37,7 @@ const ServicePage = ({ currService }) => {
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-              <div className="flex items-center text-gray-900 text-3xl title-font font-medium mb-4 gap-4">
+              <div className="flex items-center text-gray-900 text-3xl title-font font-bold mb-4 gap-2">
                 <div>{iconHelper(currService?.name)}</div>
                 <h1>{currService?.name}</h1>
               </div>
@@ -56,13 +56,13 @@ const ServicePage = ({ currService }) => {
                 {currService?.description ? (
                   currService?.description
                 ) : (
-                  <p>
+                  <div>
                     Fam locavore kickstarter distillery. Mixtape chillwave
                     tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam
                     inxigo juiceramps cornhole raw denim forage brooklyn.
                     Everyday carry +1 seitan poutine tumeric. Gastropub blue
                     bottle austin listicle pour-over, neutra jean.
-                  </p>
+                  </div>
                 )}
               </div>
               <div className="flex border-t border-gray-200 py-2">
@@ -99,13 +99,15 @@ const ServicePage = ({ currService }) => {
               </div>
             </div>
             <div className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
-              <Image
-                alt="miami boat propeller"
-                className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg"
-                src={currService?.photo}
-                width={500}
-                height={500}
-              />
+              <div className="w-[500px] h-[500px] shadow-xl shadow-cyan-500/50 rounded-lg">
+                <Image
+                  alt="miami boat propeller"
+                  className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg"
+                  src={currService?.photo}
+                  width="500"
+                  height="500"
+                />
+              </div>
             </div>
           </div>
         </div>
