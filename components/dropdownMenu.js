@@ -18,7 +18,7 @@ export default function DropdownMenu() {
         </div>
       </Menu.Button>
       <Menu.Items
-        className="absolute right-0 mt-2 lg:w-[35rem] lg:p-4 lg:flex lg:justify-between origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        className="absolute lg:right-0 lg:mt-2 w-full lg:w-[35rem] lg:p-4 lg:flex lg:justify-between origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         role="menu"
         aria-orientation="vertical"
         aria-labelledby="menu-button"
@@ -26,7 +26,7 @@ export default function DropdownMenu() {
         {Object.keys(nestedServices).map((category, idx) => (
           <div key={category}>
             <div>
-              <div>{category}</div>
+              <div className="p-2">{category}</div>
               <div className="border-b lg:h-2"></div>
             </div>
             {Object.values(nestedServices)[idx].map((service) => (
@@ -44,7 +44,7 @@ export default function DropdownMenu() {
                   <div
                     className={`${
                       active ? "text-white bg-blue-800" : "text-gray-700"
-                    } block px-4 py-2 text-sm rounded-lg`}
+                    } block px-4 py-2 rounded-lg`}
                   >
                     <a className="flex items-center gap-2">
                       <span className="text-xl">

@@ -106,6 +106,8 @@ const ServicePage = ({ currService }) => {
                   src={currService?.photo}
                   width="500"
                   height="500"
+                  // placeholder="blur"
+                  // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
                 />
               </div>
             </div>

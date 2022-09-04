@@ -8,10 +8,12 @@ const Layout = ({ children }) => {
       <div className="z-50">
         <Navbar />
       </div>
+      {/* <div className="h-20"></div> */}
 
       <main className="flex-1 bg-gradient-to-b from-gray-50 to-gray-100">
         <div className="mb-2">{children}</div>
       </main>
+
       <footer className="text-gray-600 body-font">
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
