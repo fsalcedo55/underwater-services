@@ -8,12 +8,9 @@ export default function DropdownMenu() {
   const router = useRouter()
 
   return (
-    <Menu
-      as="div"
-      // className="relative"
-    >
+    <Menu as="div" className="relative">
       <Menu.Button>
-        <div className="lg:nav-button dropdown-nav-button flex items-center gap-1">
+        <div className="lg:nav-button dropdown-nav-button lg:text-base flex items-center gap-1">
           <span>Services</span>
           <span className="text-lg">
             <MdKeyboardArrowDown />

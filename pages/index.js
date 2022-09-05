@@ -52,6 +52,7 @@ export default function Home() {
           </div>
         </div> */}
       </main>
+      <div className="lg:h-20"></div>
       <section id="contact">
         <Contact />
       </section>

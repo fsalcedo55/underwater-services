@@ -7,6 +7,11 @@ import { Transition } from "@headlessui/react"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+
+  const handleClick = (url) => {
+    setIsOpen(false)
+  }
 
   return (
     <nav className="shadow-sm w-full z-10">
@@ -129,7 +134,7 @@ function Navbar() {
               <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
                 <li className="dropdown-nav-button">
                   <Link href="/">
-                    <a>Home</a>
+                    <a onClick={handleClick}>Home</a>
                   </Link>
                 </li>
 
@@ -139,17 +144,17 @@ function Navbar() {
 
                 <li className="dropdown-nav-button">
                   <Link href="/">
-                    <a>About</a>
+                    <a onClick={handleClick}>About</a>
                   </Link>
                 </li>
                 <li className="dropdown-nav-button">
                   <Link href="/">
-                    <a>Pricing</a>
+                    <a onClick={handleClick}>Pricing</a>
                   </Link>
                 </li>
                 <li className="dropdown-nav-button">
                   <Link href="/#contact">
-                    <a>Contact</a>
+                    <a onClick={handleClick}>Contact</a>
                   </Link>
                 </li>
               </ul>
