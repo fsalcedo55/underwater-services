@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="shadow-sm w-full z-10">
       <div className="w-full">
         <div className="flex items-center h-20 w-full">
-          <div className="flex items-center  px-5  justify-between w-full">
+          <div className="flex items-center px-5 justify-between w-full">
             <div className="flex justify-center items-center flex-shrink-0 ">
               <Link href="/">
                 <a className="flex items-center">
@@ -22,60 +22,51 @@ function Navbar() {
                     width="50"
                     height="50"
                   />
-                  <span className="self-center sm:text-xl text-md font-semibold whitespace-nowrap text-slate-900">
+                  <span className="hidden sm:flex self-center sm:text-3xl text-lg font-semibold whitespace-nowrap text-slate-900">
                     Seamaster Marine Repair
                   </span>
+                  <div className="flex flex-col sm:hidden whitespace-nowrap text-slate-900 text-center">
+                    <span className="text-lg font-semibold">Seamaster</span>
+                    <span className="text-base font-normal">Marine Repair</span>
+                  </div>
                 </a>
               </Link>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:border-0 md:bg-white">
-                  <li>
+            <div className="hidden lg:block">
+              <div className="ml-10 flex space-x-4">
+                <ul className="flex flex-col items-center md:flex-row md:space-x-8 md:text-md md:font-medium">
+                  <li className="cursor-pointer">
                     <Link href="/">
-                      <a
-                        className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 md:text-blue-700 md:p-0"
-                        aria-current="page"
-                      >
-                        Home
-                      </a>
+                      <a className="nav-button">Home</a>
                     </Link>
                   </li>
 
-                  <li>
-                    <a className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-vioblue0 active:bg-vioblue0 focus:outline-none focus:ring focus:ring-vioblue0 md:hover:text-blue-700 md:p-0">
+                  <li className="cursor-pointer">
+                    <a>
                       <DropdownMenu />
                     </a>
                   </li>
 
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 md:hover:text-blue-700 md:p-0"
-                    >
-                      About
-                    </a>
+                  <li className="cursor-pointer">
+                    <Link href="/">
+                      <a className="nav-button">About</a>
+                    </Link>
                   </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 md:hover:text-blue-700 md:p-0"
-                    >
-                      Pricing
-                    </a>
+                  <li className="cursor-pointer">
+                    <Link href="/">
+                      <a className="nav-button">Pricing</a>
+                    </Link>
                   </li>
-                  <li>
+                  <li className="cursor-pointer">
                     <Link href="/#contact">
-                      <a className="block py-2 pr-4 pl-3 text-gray-700 rblue hover:bg-violeblueactive:bg-violet-700 focus:outline-none focus:blueocus:ring-violet-300 md:hover:text-blue-700 md:p-0">
-                        Contact
-                      </a>
+                      <a className="nav-button">Contact</a>
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="mr-10 flex md:hidden ">
+          <div className="mx-5 flex lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -131,21 +122,14 @@ function Navbar() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
+        {/* Dropdown menu below */}
         {(ref) => (
-          <div className="md:hidden" id="mobile-menu">
-            <div
-              ref={ref}
-              className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
-            >
-              <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:border-0 md:bg-white">
-                <li>
+          <div className="lg:hidden" id="mobile-menu">
+            <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
+                <li className="dropdown-nav-button">
                   <Link href="/">
-                    <a
-                      className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                      aria-current="page"
-                    >
-                      Home
-                    </a>
+                    <a>Home</a>
                   </Link>
                 </li>
 
@@ -153,27 +137,19 @@ function Navbar() {
                   <DropdownMenu />
                 </li>
 
-                <li>
-                  <a
-                    href="#"
-                    className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 md:hover:text-blue-700 md:p-0"
-                  >
-                    About
-                  </a>
+                <li className="dropdown-nav-button">
+                  <Link href="/">
+                    <a>About</a>
+                  </Link>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 md:hover:text-blue-700 md:p-0"
-                  >
-                    Pricing
-                  </a>
+                <li className="dropdown-nav-button">
+                  <Link href="/">
+                    <a>Pricing</a>
+                  </Link>
                 </li>
-                <li>
+                <li className="dropdown-nav-button">
                   <Link href="/#contact">
-                    <a className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-vioblue0 active:bg-vioblue0 focus:outline-none focus:ring focus:ring-vioblue0 md:hover:text-blue-700 md:p-0">
-                      Contact
-                    </a>
+                    <a>Contact</a>
                   </Link>
                 </li>
               </ul>

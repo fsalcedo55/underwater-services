@@ -14,12 +14,12 @@ export default function Home() {
         />
       </Head>
 
-      <main>
-        <div className="lg:container flex flex-col px-6 py-14 mx-auto space-y-6 lg:h-[38rem] lg:py-16 lg:flex-row lg:items-center">
-          <div className="w-full lg:w-1/2 ">
+      <main className="lg:flex lg:justify-center">
+        <div className="lg:container flex flex-col py-14 space-y-6 lg:h-[38rem] lg:py-16 lg:flex-row lg:items-center">
+          <div className="w-full lg:w-1/2 lg:mx-3">
             <div className="lg:max-w-2xl">
-              <div className="flex flex-col justify-center">
-                <h1 className="text-5xl font-bold text-gray-800 lg:text-6xl">
+              <div className="flex flex-col text-center">
+                <h1 className="text-4xl font-bold text-gray-800 sm:text-6xl">
                   We take care of your{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-800 drop-shadow-lg">
                     underwater
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center lg:w-1/2">
+          <div className="flex items-center justify-center lg:w-1/2 mx-3">
             <Image
               src="/hero-photo.jpg"
               alt="Seacraft Marine Repair"

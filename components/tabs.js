@@ -12,9 +12,9 @@ export default function Tabs() {
   let [categories] = useState(nestedServices)
 
   return (
-    <div className="w-full max-w-xl px-2 py-4 sm:px-0">
+    <div className="w-full mx-auto max-w-xl px-2 py-4 sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+        <Tab.List className="flex justify-center space-x-1 rounded-xl bg-blue-900/20 p-1">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
@@ -52,7 +52,9 @@ export default function Tabs() {
                         {iconHelper(service.name)}
                       </div>
 
-                      <span className="mx-3 text-sm">{service.name}</span>
+                      <span className="mx-3 text-base lg:text-sm">
+                        {service.name}
+                      </span>
                     </div>
                   </Link>
                 ))}

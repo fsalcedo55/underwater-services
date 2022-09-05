@@ -34,27 +34,27 @@ const ServicePage = ({ currService }) => {
         <meta name={currService?.name} content="Seamaster Marine Repair" />
       </Head>
       <section className="text-gray-600 body-font overflow-hidden">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="lg:w-4/5 mx-auto flex flex-wrap">
+        <div className="container px-5 py-12 mx-auto">
+          <div className="mx-auto flex flex-col lg:flex-row justify-center">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-              <div className="flex items-center text-gray-900 text-3xl title-font font-bold mb-4 gap-2">
-                <div>{iconHelper(currService?.name)}</div>
-                <h1>{currService?.name}</h1>
+              <div className="flex justify-center lg:justify-start text-gray-900 title-font font-bold mb-4 gap-2">
+                <div className="text-3xl">{iconHelper(currService?.name)}</div>
+                <h1 className="text-2xl sm:text-3xl">{currService?.name}</h1>
               </div>
               <div className="flex mb-4">
                 <a className="flex-grow text-blue-600 border-b-2 border-blue-600 py-2 text-lg px-1">
                   Description
                 </a>
-                <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
+                {/* <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
                   Reviews
                 </a>
                 <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
                   Details
-                </a>
+                </a> */}
               </div>
               <div className="leading-relaxed mb-4">
                 {currService?.description ? (
-                  currService?.description
+                  <p>{currService?.description}</p>
                 ) : (
                   <div>
                     Fam locavore kickstarter distillery. Mixtape chillwave
@@ -65,7 +65,7 @@ const ServicePage = ({ currService }) => {
                   </div>
                 )}
               </div>
-              <div className="flex border-t border-gray-200 py-2">
+              {/* <div className="flex border-t border-gray-200 py-2">
                 <span className="text-gray-500">Color</span>
                 <span className="ml-auto text-gray-900">Blue</span>
               </div>
@@ -76,8 +76,8 @@ const ServicePage = ({ currService }) => {
               <div className="flex border-t border-b mb-6 border-gray-200 py-2">
                 <span className="text-gray-500">Quantity</span>
                 <span className="ml-auto text-gray-900">4</span>
-              </div>
-              <div className="flex">
+              </div> */}
+              {/* <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
                   $58.00
                 </span>
@@ -96,20 +96,16 @@ const ServicePage = ({ currService }) => {
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                   </svg>
                 </button>
-              </div>
+              </div> */}
             </div>
-            <div className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
-              <div className="w-[500px] h-[500px] shadow-xl shadow-cyan-500/50 rounded-lg">
-                <Image
-                  alt="miami boat propeller"
-                  className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg"
-                  src={currService?.photo}
-                  width="500"
-                  height="500"
-                  // placeholder="blur"
-                  // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-                />
-              </div>
+            <div className="flex justify-center">
+              <Image
+                alt="miami boat propeller"
+                className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg"
+                src={currService?.photo}
+                width="500"
+                height="500"
+              />
             </div>
           </div>
         </div>

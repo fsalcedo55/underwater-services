@@ -87,10 +87,10 @@ function Contact() {
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-5 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl lg:text-6xl text-2xl font-bold  title-font mb-4 text-gray-800">
+          <h1 className="sm:text-3xl lg:text-6xl text-6xl font-bold title-font mb-4 text-gray-800">
             Contact Us
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base lg:text-lg">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">
             Let&apos;s get you back on the water as soon as possible
           </p>
         </div>
