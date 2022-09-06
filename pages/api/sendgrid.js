@@ -173,7 +173,7 @@ export default async function handler(req, res) {
       <tbody>
         <tr>
           <td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
-            <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px;" width="95" alt="" data-proportionally-constrained="true" data-responsive="false" src="https://seacraft-marine-repair-git-main-fsalcedo55.vercel.app/seacraft-marine-repair.png" >
+            <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px;" width="95" alt="" data-proportionally-constrained="true" data-responsive="false" src="https://seacraft-marine-repair-git-main-fsalcedo55.vercel.app/seacraft-marine-repair.png" ><div style="font-size:16px; line-height:30px; padding:0px 0px 0px 0px; font-family: 'Audiowide',;">Seamaster Marine Repair</div>
           </td>
         </tr>
       </tbody>
@@ -194,7 +194,12 @@ export default async function handler(req, res) {
       <tbody>
         <tr>
           <td style="padding:18px 30px 18px 30px; line-height:22px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="font-size: 18px">We will reply to you as soon as possible.</span><span style="font-size: 18px"></span></div>
-  <div style="font-family: inherit; text-align: center">Your message: ${req.body.message}</div><div></div></div></td>
+  <div style="font-family: inherit; text-align: center">Your phone number:</div> 
+  <div style="font-family: inherit; text-align: center">${req.body.phoneNumber}</div> 
+  <div style="font-family: inherit; text-align: center">Your message:</div> 
+  <div style="font-family: inherit; text-align: center">${req.body.message}</div> 
+      <div style="font-family: inherit; text-align: center; font-size: 12px">www.seamastermarinerepair.com</div> 
+      </div></td>
         </tr>
       </tbody>
     </table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="7770fdab-634a-4f62-a277-1c66b2646d8d">
@@ -254,7 +259,7 @@ export default async function handler(req, res) {
       </table></td>
         </tr>
       </tbody>
-    </table><div data-role="module-unsubscribe" class="module" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5"><div class="Unsubscribe--addressLine"><p class="Unsubscribe--senderName" style="font-size:12px; line-height:20px;">Seamaster Marine Repair</p><p style="font-size:12px; line-height:20px;"><span class="Unsubscribe--senderCity">Miami</span>, <span class="Unsubscribe--senderState">FL</span></p></div><p style="font-size:12px; line-height:20px;"><a class="Unsubscribe--unsubscribeLink" href="{{{unsubscribe}}}" target="_blank" style="">Unsubscribe</a> - <a href="{{{unsubscribe_preferences}}}" target="_blank" class="Unsubscribe--unsubscribePreferences" style="">Unsubscribe Preferences</a></p></div><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed;" width="100%" data-muid="550f60a9-c478-496c-b705-077cf7b1ba9a">
+    </table><div data-role="module-unsubscribe" class="module" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5"><div class="Unsubscribe--addressLine"><p class="Unsubscribe--senderName" style="font-size:12px; line-height:20px;">Seamaster Marine Repair, LLC</p><p style="font-size:12px; line-height:20px;"><span class="Unsubscribe--senderCity">Miami</span>, <span class="Unsubscribe--senderState">FL</span></p></div><p style="font-size:12px; line-height:20px;"></p></div><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed;" width="100%" data-muid="550f60a9-c478-496c-b705-077cf7b1ba9a">
        
       </table></td>
                                         </tr>
