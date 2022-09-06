@@ -4,7 +4,7 @@ import Image from "next/image"
 const Layout = ({ children }) => {
   const year = new Date().getFullYear()
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <div className="z-50">
         <Navbar />
       </div>
@@ -15,20 +15,22 @@ const Layout = ({ children }) => {
       </main>
 
       <footer className="text-gray-600 body-font">
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <div className="container flex flex-col items-center px-5 py-8 mx-auto md:flex-row">
+          <a className="flex items-center justify-center font-medium text-gray-900 title-font lg:justify-start">
             <Image
               src="/seacraft-marine-repair.png"
               alt="SeaMaster Marine Repair"
               width="50"
               height="50"
             />
-            <span className="ml-3 text-xl">Seamaster Marine Repair</span>
+            <span className="ml-3 text-xl font-['Audiowide']">
+              Seamaster Marine Repair
+            </span>
           </a>
-          <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+          <p className="mt-4 text-sm text-gray-500 md:ml-4 md:pl-4 sm:border-l-2 md:border-gray-200 md:py-2 md:mt-0">
             © <span>{year}</span> All Rights Reserved
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <span className="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
             <a className="text-gray-500">
               <svg
                 fill="currentColor"

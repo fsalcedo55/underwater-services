@@ -33,26 +33,26 @@ const ServicePage = ({ currService }) => {
         <title>{currService?.name}</title>
         <meta name={currService?.name} content="Seamaster Marine Repair" />
       </Head>
-      <section className="text-gray-600 body-font overflow-hidden">
+      <section className="overflow-hidden text-gray-600 body-font">
         <div className="container px-5 py-12 mx-auto">
-          <div className="mx-auto flex flex-col lg:flex-row justify-center">
-            <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-              <div className="flex justify-center lg:justify-start text-gray-900 title-font font-bold mb-4 gap-2">
+          <div className="flex flex-col justify-center mx-auto lg:flex-row">
+            <div className="w-full mb-6 lg:w-1/2 lg:pr-10 lg:py-6 lg:mb-0">
+              <div className="flex justify-center gap-2 mb-4 font-bold text-gray-900 lg:justify-start title-font">
                 <div className="text-3xl">{iconHelper(currService?.name)}</div>
                 <h1 className="text-2xl sm:text-3xl">{currService?.name}</h1>
               </div>
               <div className="flex mb-4">
-                <a className="flex-grow text-blue-600 border-b-2 border-blue-600 py-2 text-lg px-1">
+                <a className="flex-grow px-1 py-2 text-lg text-blue-600 border-b-2 border-blue-600">
                   Description
                 </a>
-                {/* <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
+                {/* <a className="flex-grow px-1 py-2 text-lg border-b-2 border-gray-300">
                   Reviews
                 </a>
-                <a className="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">
+                <a className="flex-grow px-1 py-2 text-lg border-b-2 border-gray-300">
                   Details
                 </a> */}
               </div>
-              <div className="leading-relaxed mb-4">
+              <div className="mb-4 leading-relaxed">
                 {currService?.description ? (
                   <p>{currService?.description}</p>
                 ) : (
@@ -65,26 +65,26 @@ const ServicePage = ({ currService }) => {
                   </div>
                 )}
               </div>
-              {/* <div className="flex border-t border-gray-200 py-2">
+              {/* <div className="flex py-2 border-t border-gray-200">
                 <span className="text-gray-500">Color</span>
                 <span className="ml-auto text-gray-900">Blue</span>
               </div>
-              <div className="flex border-t border-gray-200 py-2">
+              <div className="flex py-2 border-t border-gray-200">
                 <span className="text-gray-500">Size</span>
                 <span className="ml-auto text-gray-900">Medium</span>
               </div>
-              <div className="flex border-t border-b mb-6 border-gray-200 py-2">
+              <div className="flex py-2 mb-6 border-t border-b border-gray-200">
                 <span className="text-gray-500">Quantity</span>
                 <span className="ml-auto text-gray-900">4</span>
               </div> */}
               {/* <div className="flex">
-                <span className="title-font font-medium text-2xl text-gray-900">
+                <span className="text-2xl font-medium text-gray-900 title-font">
                   $58.00
                 </span>
-                <button className="flex ml-auto text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
+                <button className="flex px-6 py-2 ml-auto text-white bg-blue-600 border-0 rounded focus:outline-none hover:bg-blue-600">
                   Button
                 </button>
-                <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                <button className="inline-flex items-center justify-center w-10 h-10 p-0 ml-4 text-gray-500 bg-gray-200 border-0 rounded-full">
                   <svg
                     fill="currentColor"
                     strokeLinecap="round"
@@ -101,7 +101,7 @@ const ServicePage = ({ currService }) => {
             <div className="flex justify-center">
               <Image
                 alt="miami boat propeller"
-                className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg"
+                className="object-cover object-center w-full h-64 rounded-lg lg:w-1/2 lg:h-auto"
                 src={currService?.photo}
                 width="500"
                 height="500"

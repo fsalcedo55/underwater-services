@@ -12,19 +12,19 @@ export default function Tabs() {
   let [categories] = useState(nestedServices)
 
   return (
-    <div className="w-full mx-auto max-w-xl px-2 py-4 sm:px-0">
+    <div className="w-full max-w-xl px-2 py-4 mx-auto sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex justify-center space-x-1 rounded-xl bg-blue-900/20 p-1">
+        <Tab.List className="flex justify-center p-1 space-x-1 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 font-semibold leading-5 text-blue-700",
+                  "w-full rounded-lg py-2.5 font-semibold leading-5 text-blue-500",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                   selected
                     ? "bg-white shadow"
-                    : "text-black hover:bg-white/[0.52] hover:text-gray-800"
+                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
                 )
               }
             >
@@ -47,12 +47,12 @@ export default function Tabs() {
                     href={`./services/${service.paramName}`}
                     key={service.name}
                   >
-                    <div className="flex items-center text-gray-800 p-3 hover:bg-blue-800 hover:text-white rounded-lg cursor-pointer ">
-                      <div className="w-5 h-5 text-2xl">
+                    <div className="flex items-center p-3 text-gray-800 rounded-lg cursor-pointer hover:bg-gray-100">
+                      <div className="w-5 h-5 sm:text-2xl">
                         {iconHelper(service.name)}
                       </div>
 
-                      <span className="mx-3 text-base lg:text-sm">
+                      <span className="mx-3 text-xl lg:text-sm">
                         {service.name}
                       </span>
                     </div>

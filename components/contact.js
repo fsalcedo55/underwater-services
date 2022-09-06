@@ -2,21 +2,29 @@ import { useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useRouter } from "next/router"
-import { services } from "../data/services"
 
 function Contact() {
   const [fullname, setFullname] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [servicesArr, setServicesArr] = useState([])
+  const [service, setService] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
   const router = useRouter()
 
-  console.log({ fullname }, { email }, { message })
+  console.log(
+    { fullname },
+    { email },
+    { message },
+    { phoneNumber },
+    { service }
+  )
 
   const resetState = () => {
     setFullname("")
     setEmail("")
     setMessage("")
+    setPhoneNumber("")
+    setService("")
     router.push("/")
   }
 
@@ -32,6 +40,8 @@ function Contact() {
           fullname: fullname,
           email: email,
           message: message,
+          phoneNumber: phoneNumber,
+          service: service,
         }),
       })
       toast.success("We'll be in touch shortly! 🫡", {
@@ -84,64 +94,118 @@ function Contact() {
   // };
 
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="relative text-gray-600 body-font">
       <div className="container px-5 py-5 mx-auto">
-        <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl lg:text-6xl text-6xl font-bold title-font mb-4 text-gray-800">
+        <div className="flex flex-col w-full mb-12 text-center">
+          <h1 className="mb-4 text-6xl font-bold text-gray-800 title-font">
             Contact Us
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">
+          <p className="mx-auto text-lg leading-relaxed lg:w-2/3">
             Let&apos;s get you back on the water as soon as possible
           </p>
         </div>
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
+        <div className="mx-auto lg:w-1/2 md:w-2/3">
           <form onSubmit={handleSubmit} className="flex flex-wrap -m-2">
-            <div className="p-2 w-1/2">
+            <div className="w-1/2 p-2">
               <div className="relative">
                 <label
                   htmlFor="fullname"
-                  className="leading-7 text-sm text-gray-600"
+                  className="text-sm leading-7 text-gray-600"
                 >
                   Full Name
                 </label>
                 <input
+                  required
                   type="text"
                   value={fullname}
                   onChange={(e) => setFullname(e.target.value)}
-                  className="w-full bg-gray-200 bg-opacity-50 rounded-lg border-2 border-gray-300 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                 />
               </div>
             </div>
-            <div className="p-2 w-1/2">
+            <div className="w-1/2 p-2">
               <div className="relative">
                 <label
                   htmlFor="email"
-                  className="leading-7 text-sm text-gray-600"
+                  className="text-sm leading-7 text-gray-600"
                 >
                   Email
                 </label>
                 <input
+                  required
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-gray-200 bg-opacity-50 rounded-lg border-2 border-gray-300 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                 />
               </div>
             </div>
-            <div className="p-2 w-full">
+            <div className="w-1/2 p-2">
+              <div className="relative">
+                <label
+                  htmlFor="phoneNumber"
+                  className="text-sm leading-7 text-gray-600"
+                >
+                  Phone Number
+                </label>
+                <input
+                  required
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                />
+              </div>
+            </div>
+            <div className="w-1/2 p-2">
+              <div className="relative">
+                <label
+                  htmlFor="service"
+                  className="text-sm leading-7 text-gray-600"
+                >
+                  Which service are you interested in?
+                </label>
+
+                <select
+                  required
+                  type="service"
+                  value={service}
+                  onChange={(e) => setService(e.target.value)}
+                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                >
+                  <option></option>
+                  <option value="propellers">Propellers</option>
+                  <option value="bottomCleaning">Bottom Cleaning</option>
+                  <option value="underwaterInspections">
+                    Underwater Inspections
+                  </option>
+                  <option value="structuralFiberglassRepair">
+                    Structural Fiberglass Repair
+                  </option>
+                  <option value="seaWallMaintenance">
+                    Seawall Maintenance
+                  </option>
+                  <option value="deckMaintenance">Deck Maintenance</option>
+                  <option value="dredgingAndRockRemoval">
+                    Dredging And Rock Removal
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div className="w-full p-2">
               {/* <div className="flex justify-between">
                 <div className="mb-4">
-                  <div className="text-sm text-gray-600 mt-4 mb-2">
+                  <div className="mt-4 mb-2 text-sm text-gray-600">
                     Which services are you interested in?
                   </div>
                   <div className="grid grid-cols-2 gap-6">
                     {services.map((service) => (
                       <div
-                        className="form-check text-sm text-gray-600"
+                        className="text-sm text-gray-600 form-check"
                         key={service.name}
                       >
                         <input
-                          className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                          className="float-left w-4 h-4 mt-1 mr-2 align-top transition duration-200 bg-white bg-center bg-no-repeat bg-contain border border-gray-300 rounded-sm appearance-none cursor-pointer form-check-input checked:bg-blue-600 checked:border-blue-600 focus:outline-none"
                           type="checkbox"
                           value={service.name}
                           id="flexCheckDefault"
@@ -154,7 +218,7 @@ function Contact() {
                           }}
                         />
                         <label
-                          className="form-check-label inline-block text-gray-800"
+                          className="inline-block text-gray-800 form-check-label"
                           htmlFor="flexCheckDefault"
                         >
                           {service.name}
@@ -167,23 +231,24 @@ function Contact() {
               <div className="relative">
                 <label
                   htmlFor="message"
-                  className="leading-7 text-sm text-gray-600"
+                  className="text-sm leading-7 text-gray-600"
                 >
-                  Message
+                  Tell us more about your project
                 </label>
                 <textarea
+                  required
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full bg-gray-200 bg-opacity-50 rounded-lg border-2 border-gray-300 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  className="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none resize-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                 ></textarea>
               </div>
             </div>
-            <div className="p-2 w-full">
+            <div className="w-full p-2">
               <button
                 // type="submit"
-                className="flex my-2 mx-auto text-white bg-blue-500 border-0 py-4 px-10 focus:outline-none hover:bg-blue-700 rounded-xl text-lg font-semibold lg:text-xl hover:shadow-lg hover:shadow-cyan-500/50"
+                className="flex px-10 py-4 mx-auto my-2 text-lg font-semibold text-white bg-blue-500 border-0 focus:outline-none hover:bg-blue-700 rounded-xl lg:text-xl hover:shadow-lg hover:shadow-cyan-500/50"
               >
-                <span className="transform transition duration-500 hover:scale-105">
+                <span className="transition duration-500 transform hover:scale-105">
                   Submit Your Inquiry
                 </span>
               </button>
