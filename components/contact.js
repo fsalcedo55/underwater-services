@@ -9,6 +9,7 @@ function Contact() {
   const [message, setMessage] = useState("")
   const [service, setService] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
 
   console.log(
@@ -30,6 +31,7 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setIsLoading(true)
     try {
       await fetch("/api/sendgrid", {
         method: "POST",
@@ -44,15 +46,6 @@ function Contact() {
           service: service,
         }),
       })
-      toast.success("We'll be in touch shortly! 🫡", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      })
     } catch (error) {
       toast.error("Error: Please email fersaldiver@hotmail.com", {
         position: "top-center",
@@ -64,6 +57,16 @@ function Contact() {
         progress: undefined,
       })
     }
+    setIsLoading(false)
+    toast.success("We'll be in touch shortly! 🫡", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
     resetState()
   }
 
@@ -94,7 +97,8 @@ function Contact() {
   // };
 
   return (
-    <section className="relative text-gray-600 body-font">
+    <section className="relative text-gray-600 bg-white body-font">
+      <div className="md:h-24"></div>
       <div className="container px-5 py-5 mx-auto">
         <div className="flex flex-col w-full mb-12 text-center">
           <h1 className="mb-4 text-6xl font-bold text-gray-800 title-font">
@@ -247,14 +251,15 @@ function Contact() {
               </div>
             </div>
             <div className="w-full p-2">
-              <button
-                // type="submit"
-                className="flex px-10 py-4 mx-auto my-2 text-lg font-semibold text-white bg-blue-500 border-0 focus:outline-none hover:bg-blue-700 rounded-xl lg:text-xl hover:shadow-lg hover:shadow-cyan-500/50"
-              >
-                <span className="transition duration-500 transform hover:scale-105">
+              {isLoading ? (
+                <button className="flex mx-auto my-2 text-white normal-case btn btn-primary btn-disabled btn-lg loading">
+                  Sending Your Inquiry...
+                </button>
+              ) : (
+                <button className="flex mx-auto my-2 text-white normal-case btn btn-primary btn-lg">
                   Submit Your Inquiry
-                </span>
-              </button>
+                </button>
+              )}
               <ToastContainer />
             </div>
           </form>

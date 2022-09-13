@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Image from "next/image"
 import Contact from "../components/contact"
 import Tabs from "../components/tabs"
 import coverPhoto from ".././public/cover-photo.jpg"
@@ -54,28 +53,6 @@ export default function Home() {
           </div>
         </div> */}
       </main>
-      {/* <div className="relative bg-blue-900">
-        <Image
-          src={coverPhoto}
-          alt="Seacraft Marine Repair"
-          className="opacity-50"
-        />
-        <div className="absolute inset-x-0 mx-auto text-center bottom-32 max-w-7xl">
-          <div className="flex flex-col justify-start">
-            <h1 className="text-4xl font-bold text-gray-800 sm:text-8xl">
-              We take care of your{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-800 drop-shadow-lg">
-                underwater
-              </span>{" "}
-              needs
-            </h1>
-            <div className="h-8"></div>
-            <p className="text-2xl text-blue-800">+ Some things we do</p>
-            <div className="h-8"></div>
-            <Tabs />
-          </div>
-        </div>
-      </div> */}
       <div
         className="min-h-screen hero"
         style={{
@@ -87,7 +64,7 @@ export default function Home() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="text-center hero-content text-neutral-content">
           <div className="max-w-4xl">
-            <h1 className="mb-16 text-5xl font-bold sm:text-8xl">
+            <h1 className="mb-16 text-5xl font-bold text-white sm:text-8xl">
               We take care of your{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-500 drop-shadow-lg">
                 underwater
@@ -95,7 +72,7 @@ export default function Home() {
               needs
             </h1>
             <Link href="/#services">
-              <button className="normal-case btn btn-primary btn-lg">
+              <button className="text-white normal-case btn btn-primary btn-lg">
                 Check out some of our services
               </button>
             </Link>
@@ -110,24 +87,6 @@ export default function Home() {
         <div className="block h-12 min-w-screen"></div>
       </section>
 
-      {/* <div
-        className="w-full bg-center bg-cover h-[32rem]"
-        style="background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);"
-      >
-        <div className="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-semibold text-white uppercase lg:text-3xl">
-              Build Your new{" "}
-              <span className="text-blue-400 underline">Saas</span>
-            </h1>
-            <button className="w-full px-4 py-2 mt-4 text-sm font-medium text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-              Start project
-            </button>
-          </div>
-        </div>
-      </div> */}
-
-      <div className="lg:h-20"></div>
       <section id="contact">
         <Contact />
       </section>

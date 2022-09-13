@@ -18,7 +18,7 @@ export default function Tabs() {
           Our Services
         </h1>
         <p className="mx-auto text-lg leading-relaxed lg:w-2/3">
-          Your One Stop Shop for Underwater Services
+          Your one stop shop for underwater services
         </p>
       </div>
       <Tab.Group>
@@ -75,6 +75,7 @@ export default function Tabs() {
           ))}
         </Tab.Panels>
       </Tab.Group>
+      <div className="h-16"></div>
     </div>
   )
 }

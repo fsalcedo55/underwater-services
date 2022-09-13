@@ -45,7 +45,7 @@ export default function DropdownMenu() {
                 {({ active }) => (
                   <div
                     className={`${
-                      active ? "bg-white drop-shadow" : "text-gray-700"
+                      active ? "hover:bg-gray-100" : "text-gray-700"
                     } block px-4 py-3 rounded-lg`}
                   >
                     <a className="flex items-center gap-2">

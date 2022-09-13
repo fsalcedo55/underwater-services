@@ -1,5 +1,6 @@
 import Navbar from "./navbar"
 import Image from "next/image"
+import Link from "next/link"
 
 const Layout = ({ children }) => {
   const year = new Date().getFullYear()
@@ -11,22 +12,24 @@ const Layout = ({ children }) => {
       {/* <div className="h-20"></div> */}
 
       <main className="flex-1 bg-gradient-to-b from-gray-50 to-gray-100">
-        <div className="mb-2">{children}</div>
+        <div>{children}</div>
       </main>
 
       <footer className="text-gray-600 body-font">
         <div className="container flex flex-col items-center px-5 py-8 mx-auto md:flex-row">
-          <a className="flex items-center justify-center font-medium text-gray-900 title-font lg:justify-start">
-            <Image
-              src="/seacraft-marine-repair.png"
-              alt="SeaMaster Marine Repair"
-              width="50"
-              height="50"
-            />
-            <span className="ml-3 text-xl font-['Audiowide']">
-              Seamaster Marine Repair
-            </span>
-          </a>
+          <Link href="/">
+            <a className="flex items-center justify-center font-medium text-gray-900 cursor-pointer title-font lg:justify-start">
+              <Image
+                src="/seacraft-marine-repair.png"
+                alt="SeaMaster Marine Repair"
+                width="50"
+                height="50"
+              />
+              <span className="ml-3 text-xl font-['Audiowide']">
+                Seamaster Marine Repair
+              </span>
+            </a>
+          </Link>
           <p className="mt-4 text-sm text-gray-500 md:ml-4 md:pl-4 sm:border-l-2 md:border-gray-200 md:py-2 md:mt-0">
             © <span>{year}</span> All Rights Reserved
           </p>

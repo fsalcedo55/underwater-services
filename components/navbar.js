@@ -27,7 +27,7 @@ function Navbar() {
                     width="50"
                     height="50"
                   />
-                  <span className="font-['Audiowide'] self-center hidden text-lg sm:flex sm:text-3xl whitespace-nowrap text-slate-900">
+                  <span className="font-['Audiowide'] self-center hidden text-lg sm:flex sm:text-2xl whitespace-nowrap text-slate-900">
                     Seamaster Marine Repair
                   </span>
                   <div className="flex flex-col text-center sm:hidden whitespace-nowrap text-slate-900">
