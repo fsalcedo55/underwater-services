@@ -51,7 +51,8 @@ export const nestedServices = {
       photo: "/Seawall-Repair.png",
       description:
         "Seawalls are structures built along the shoreline to prevent erosion and protect the land from storm surges. These structures are often made of concrete, stone, or steel. In some cases, seawalls may be constructed using vegetation, such as sea grasses. There are many different types of seawalls, including breakwaters, groynes, jetties, and revetments.",
-      shortDescription: "Installation & Removal",
+      shortDescription:
+        "Inspections, maintenance, photos and video, repairs...",
     },
     {
       name: "Docks",
@@ -72,6 +73,16 @@ export const nestedServices = {
       description:
         "Ocean dredging is the act of removing sediment from the bottom of the ocean floor. Sediment is a mixture of sand, rocks, shells, and other materials that have fallen to the bottom of the ocean. Sediment helps create the foundation of the ocean floor, and without it, the ocean would lose much of its value as a habitat for marine life. Ocean dredging is done by machines that drag chains across the ocean floor. As the machine moves forward, it scrapes away the sediment and deposits it onto barges.",
       shortDescription: "Dredgding, erosion control... ",
+    },
+    {
+      name: "Pilings",
+      paramName: "pilings",
+      icon: "<GiAncientColumns />",
+      href: "/services/pilings",
+      photo: "/pilings.png",
+      description:
+        "Ocean dredging is the act of removing sediment from the bottom of the ocean floor. Sediment is a mixture of sand, rocks, shells, and other materials that have fallen to the bottom of the ocean. Sediment helps create the foundation of the ocean floor, and without it, the ocean would lose much of its value as a habitat for marine life. Ocean dredging is done by machines that drag chains across the ocean floor. As the machine moves forward, it scrapes away the sediment and deposits it onto barges.",
+      shortDescription: "Repairs, restoration, encapsulation... ",
     },
   ],
 }

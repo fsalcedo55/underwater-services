@@ -2,6 +2,7 @@ import Head from "next/head"
 import Contact from "../components/contact"
 import Tabs from "../components/tabs"
 import coverPhoto from ".././public/cover-photo.jpg"
+import bottomHero from ".././public/bottomhero-long.jpg"
 import Link from "next/link"
 
 export default function Home() {
@@ -64,7 +65,7 @@ export default function Home() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="text-center hero-content text-neutral-content">
           <div className="max-w-4xl">
-            <h1 className="mb-16 text-5xl font-bold text-white sm:text-8xl">
+            <h1 className="mb-16 text-5xl font-semibold text-white sm:text-8xl">
               We take care of your{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-500 drop-shadow-lg">
                 underwater
@@ -72,7 +73,7 @@ export default function Home() {
               needs
             </h1>
             <Link href="/#services">
-              <button className="text-white normal-case btn btn-primary btn-lg">
+              <button className="text-white normal-case btn btn-primary btn-lg bg-gradient-to-l from-cyan-500 to-blue-500">
                 Check out some of our services
               </button>
             </Link>
@@ -90,6 +91,22 @@ export default function Home() {
       <section id="contact">
         <Contact />
       </section>
+      <div
+        className="min-h-screen hero"
+        style={{
+          backgroundImage: `url(${bottomHero.src})`,
+          width: "100%",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="text-center md:text-left hero-content text-neutral-content">
+          <div className="max-w-8xl">
+            <h1 className="max-w-xl text-6xl text-white font-extralight md:mr-96 mb-96 sm:text-8xl">
+              We keep your boat afloat
+            </h1>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

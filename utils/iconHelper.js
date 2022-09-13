@@ -4,6 +4,7 @@ import {
   GiGlassBall,
   GiFallingRocks,
   GiWoodBeam,
+  GiAncientColumns,
 } from "react-icons/gi"
 import { MdCleaningServices } from "react-icons/md"
 import { IoMdBoat } from "react-icons/io"
@@ -32,6 +33,9 @@ export const iconHelper = (serviceName) => {
       break
     case "Dredging and Rock Removal":
       icon = <GiFallingRocks />
+      break
+    case "Pilings":
+      icon = <GiAncientColumns />
       break
     default:
       icon = <GiBoatPropeller />

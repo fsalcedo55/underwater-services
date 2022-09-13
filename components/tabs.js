@@ -63,7 +63,7 @@ export default function Tabs() {
                         <div className="text-xl font-semibold lg:text-xl">
                           {service.name}
                         </div>
-                        <div className="max-w-xs text-base font-light text-gray-500 truncate">
+                        <div className="hidden max-w-xs text-xs font-light text-gray-500 truncate sm:block md:text-base">
                           {service.shortDescription}
                         </div>
                       </div>
