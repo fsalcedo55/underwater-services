@@ -12,7 +12,15 @@ export default function Tabs() {
   let [categories] = useState(nestedServices)
 
   return (
-    <div className="w-full max-w-xl px-2 py-4 mx-auto sm:px-0">
+    <div className="w-full max-w-4xl px-2 py-4 mx-auto sm:px-0">
+      <div className="flex flex-col w-full mb-12 text-center">
+        <h1 className="mb-4 text-6xl font-bold text-gray-800 title-font">
+          Our Services
+        </h1>
+        <p className="mx-auto text-lg leading-relaxed lg:w-2/3">
+          Your One Stop Shop for Underwater Services
+        </p>
+      </div>
       <Tab.Group>
         <Tab.List className="flex justify-center p-1 space-x-1 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500">
           {Object.keys(categories).map((category) => (
@@ -20,7 +28,7 @@ export default function Tabs() {
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 font-semibold leading-5 text-blue-500",
+                  "w-full rounded-lg py-4 font-semibold leading-5 text-blue-500",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                   selected
                     ? "bg-white shadow"
@@ -28,7 +36,7 @@ export default function Tabs() {
                 )
               }
             >
-              {category}
+              <p className="text-xl">{category}</p>
             </Tab>
           ))}
         </Tab.List>
@@ -37,7 +45,7 @@ export default function Tabs() {
             <Tab.Panel
               key={idx}
               className={classNames(
-                "rounded-xl bg-white p-3",
+                "rounded-xl bg-white p-4",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2 shadow"
               )}
             >
@@ -47,14 +55,18 @@ export default function Tabs() {
                     href={`./services/${service.paramName}`}
                     key={service.name}
                   >
-                    <div className="flex items-center p-3 text-gray-800 rounded-lg cursor-pointer hover:bg-gray-100">
-                      <div className="w-5 h-5 sm:text-2xl">
+                    <div className="flex items-center p-4 text-gray-800 border rounded-lg cursor-pointer hover:bg-gray-100">
+                      <div className="w-6 h-6 sm:text-2xl">
                         {iconHelper(service.name)}
                       </div>
-
-                      <span className="mx-3 text-xl lg:text-sm">
-                        {service.name}
-                      </span>
+                      <div className="mx-3">
+                        <div className="text-xl font-semibold lg:text-xl">
+                          {service.name}
+                        </div>
+                        <div className="max-w-xs text-base font-light text-gray-500 truncate">
+                          {service.shortDescription}
+                        </div>
+                      </div>
                     </div>
                   </Link>
                 ))}

@@ -105,8 +105,11 @@ function Contact() {
           </p>
         </div>
         <div className="mx-auto lg:w-1/2 md:w-2/3">
-          <form onSubmit={handleSubmit} className="flex flex-wrap -m-2">
-            <div className="w-1/2 p-2">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col flex-wrap -m-2 sm:flex-row"
+          >
+            <div className="p-2 sm:w-1/2">
               <div className="relative">
                 <label
                   htmlFor="fullname"
@@ -123,7 +126,7 @@ function Contact() {
                 />
               </div>
             </div>
-            <div className="w-1/2 p-2">
+            <div className="p-2 sm:w-1/2">
               <div className="relative">
                 <label
                   htmlFor="email"
@@ -140,7 +143,7 @@ function Contact() {
                 />
               </div>
             </div>
-            <div className="w-1/2 p-2">
+            <div className="p-2 sm:w-1/2">
               <div className="relative">
                 <label
                   htmlFor="phoneNumber"
@@ -157,7 +160,7 @@ function Contact() {
                 />
               </div>
             </div>
-            <div className="w-1/2 p-2">
+            <div className="p-2 sm:w-1/2">
               <div className="relative">
                 <label
                   htmlFor="service"
@@ -185,7 +188,7 @@ function Contact() {
                   <option value="seaWallMaintenance">
                     Seawall Maintenance
                   </option>
-                  <option value="deckMaintenance">Deck Maintenance</option>
+                  <option value="docks">Docks</option>
                   <option value="dredgingAndRockRemoval">
                     Dredging And Rock Removal
                   </option>

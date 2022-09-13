@@ -27,7 +27,7 @@ export const iconHelper = (serviceName) => {
     case "Seawall Maintenance":
       icon = <GiBrickWall />
       break
-    case "Deck Maintenance":
+    case "Docks":
       icon = <GiWoodBeam />
       break
     case "Dredging and Rock Removal":
