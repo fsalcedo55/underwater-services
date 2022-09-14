@@ -6,8 +6,12 @@ export const nestedServices = {
       icon: "<GiBoatPropeller />",
       href: "/services/propellers",
       photo: "/propeller.jpg",
-      description:
-        "1. Boat propellers are a critical piece of equipment that is often overlooked when installing a boat motor. If not installed properly, they can cause serious damage to the engine and even lead to catastrophic failure. In addition, if they are removed improperly, they may break off and become lodged inside the engine, causing further damage. 2. Propeller Installation Propeller installation is the first step in getting your boat motor running. Properly installing a boat propeller requires a few steps. First, make sure that the propeller is securely attached to the shaft of the motor. Next, ensure that the propeller is aligned correctly with the direction of rotation of the engine. Finally, tighten the bolts that hold the propeller onto the shaft. 3. Propeller Removal Removing a boat propeller is much easier than installing it. Simply turn the ignition switch to the “off” position and remove the spark plug wires. Once the engine is shut down, loosen the nuts holding the propeller in place and pull it out. Be careful not to lose any pieces!",
+      description: {
+        1: "Boat propellers are a critical piece of equipment that is often overlooked when installing a boat motor. If not installed properly, they can cause serious damage to the engine and even lead to catastrophic failure. In addition, if they are removed improperly, they may break off and become lodged inside the engine, causing further damage.",
+        2: "Propeller installation is the first step in getting your boat motor running. Properly installing a boat propeller requires a few steps. First, make sure that the propeller is securely attached to the shaft of the motor. Next, ensure that the propeller is aligned correctly with the direction of rotation of the engine. Finally, tighten the bolts that hold the propeller onto the shaft.",
+        3: "Removing a boat propeller is much easier than installing it. Simply turn the ignition switch to the “off” position and remove the spark plug wires. Once the engine is shut down, loosen the nuts holding the propeller in place and pull it out. Be careful not to lose any pieces!",
+        4: "Reconditioning and repairing boat propellers is a service we offer. We use our experience and knowledge to repair damaged propellers and make them work again. If your propeller is broken, we can replace it with a brand new one.",
+      },
       shortDescription: "Installation, removal, polishing...",
     },
 
@@ -60,8 +64,12 @@ export const nestedServices = {
       icon: "<GiWoodBeam />",
       href: "/services/docks",
       photo: "/deck.jpeg",
-      description:
-        "1. Waterproofing \n Waterproofing is the process of sealing cracks and holes in concrete decks. Cracks and holes can cause water damage to wood and other materials underneath. If left unrepaired, they could lead to rot and mold. \n 2. Deck cleaning \n Deck cleaning involves removing dirt, debris, and grime from the surface of the deck. A professional deck cleaner uses special equipment to remove these contaminants. \n 3. Deck staining \n Staining is the process of applying color to the surface of a wooden deck. There are many different types of stains available, including oil-based stains, latex-based stains, and acrylic-based stains. \n 4. Deck painting \n Painting a deck requires the use of specialized tools and techniques. Professional painters have access to high-quality paint supplies and equipment. \n 5. Deck repair \n Repairing a damaged deck is similar to repairing any other type of wood. You'll need to cut out the damaged area, fill the hole with wood filler, sand down the edges, apply stain or sealer, and then apply two coats of clear finish.",
+      description: {
+        1: "Waterproofing is the process of sealing cracks and holes in concrete decks. Cracks and holes can cause water damage to wood and other materials underneath. If left unrepaired, they could lead to rot and mold.",
+        2: "Deck cleaning involves removing dirt, debris, and grime from the surface of the deck. A professional deck cleaner uses special equipment to remove these contaminants. \n 3. Deck staining \n Staining is the process of applying color to the surface of a wooden deck. There are many different types of stains available, including oil-based stains, latex-based stains, and acrylic-based stains. \n 4. Deck painting \n Painting a deck requires the use of specialized tools and techniques. Professional painters have access to high-quality paint supplies and equipment. \n 5. Deck repair \n Repairing a damaged deck is similar to repairing any other type of wood. You'll need to cut out the damaged area, fill the hole with wood filler, sand down the edges, apply stain or sealer, and then apply two coats of clear finish.",
+        3: "",
+        4: "",
+      },
       shortDescription: "Repairs, maintenance, pressure clean...",
     },
     {
