@@ -46,13 +46,6 @@ export default function Home() {
             />
           </div>
         </div> */}
-        {/* <div className="flex items-center justify-center h-24 my-12 bg-gradient-to-l from-cyan-500 to-blue-800">
-          <div className="flex flex-row text-2xl font-bold text-white">
-            <p className="px-24">Reliable</p>
-            <p className="px-24">Experienced</p>
-            <p className="px-24">High-Quality</p>
-          </div>
-        </div> */}
       </main>
       <div
         className="min-h-screen hero"
