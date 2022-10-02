@@ -182,20 +182,17 @@ function Contact() {
                 >
                   <option></option>
                   <option value="propellers">Propellers</option>
-                  <option value="bottomCleaning">Bottom Cleaning</option>
+                  <option value="hullCleaning">Hull Cleaning</option>
                   <option value="underwaterInspections">
                     Underwater Inspections
                   </option>
-                  <option value="structuralFiberglassRepair">
-                    Structural Fiberglass Repair
+                  <option value="cathodicProtection">
+                    Cathodic Protection
                   </option>
                   <option value="seaWallMaintenance">
                     Seawall Maintenance
                   </option>
-                  <option value="docks">Docks</option>
-                  <option value="dredgingAndRockRemoval">
-                    Dredging And Rock Removal
-                  </option>
+                  <option value="docksandpilings">Docks and Pilings</option>
                 </select>
               </div>
             </div>
@@ -265,6 +262,7 @@ function Contact() {
           </form>
         </div>
       </div>
+      <div className="md:h-24"></div>
     </section>
   )
 }

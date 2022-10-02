@@ -292,7 +292,7 @@ export default async function handler(req, res) {
   }
 
   const msgToMe = {
-    to: "fernando.salcedo.test@gmail.com",
+    to: "fersaldiver@gmail.com",
     from: "fsalcedo55@hotmail.com", // Use the email address or domain you verified above
     subject: `Seamaster: You have a new inquiry from ${req.body.fullname}!`,
     html: messageToClient,

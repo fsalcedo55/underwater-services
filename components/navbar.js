@@ -15,6 +15,11 @@ function Navbar() {
 
   return (
     <nav className="z-10 w-full shadow-sm">
+      <div className="flex items-center justify-center h-8 text-center bg-primary">
+        <h1 className="text-xs font-semibold tracking-wider text-white sm:text-sm">
+          Welcome to Seamaster Marine Repair in Miami, FL
+        </h1>
+      </div>
       <div className="w-full">
         <div className="flex items-center w-full h-20">
           <div className="flex items-center justify-between w-full px-5">
@@ -79,7 +84,7 @@ function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 text-white bg-blue-600 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+              className="inline-flex items-center justify-center p-2 text-white rounded-md bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >

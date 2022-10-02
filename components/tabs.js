@@ -3,6 +3,7 @@ import { Tab } from "@headlessui/react"
 import { nestedServices } from "../data/services"
 import Link from "next/link"
 import { iconHelper } from "../utils/iconHelper"
+import Card from "./card"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -12,7 +13,7 @@ export default function Tabs() {
   let [categories] = useState(nestedServices)
 
   return (
-    <div className="w-full max-w-4xl px-2 py-4 mx-auto sm:px-0">
+    <div className="w-full px-2 py-4 mx-auto max-w-7xl sm:px-0">
       <div className="flex flex-col w-full mb-12 text-center">
         <h1 className="mb-4 text-6xl font-bold text-gray-800 title-font">
           Our Services
@@ -22,13 +23,13 @@ export default function Tabs() {
         </p>
       </div>
       <Tab.Group>
-        <Tab.List className="flex justify-center p-1 space-x-1 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500">
+        <Tab.List className="flex justify-center p-1 space-x-1 rounded-xl bg-gradient-to-r from-primary to-primary-focus">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-4 font-semibold leading-5 text-blue-500",
+                  "w-full rounded-lg py-4 font-semibold leading-5 text-primary",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                   selected
                     ? "bg-white shadow"
@@ -51,11 +52,27 @@ export default function Tabs() {
             >
               <div className="grid gap-6 sm:grid-cols-2">
                 {services.map((service) => (
-                  <Link
+                  <Card
+                    serviceName={service.name}
+                    shortDescription={service.shortDescription}
+                    image={service.heroPhoto}
                     href={`./services/${service.paramName}`}
                     key={service.name}
-                  >
-                    <div className="flex items-center p-4 text-gray-800 border rounded-lg cursor-pointer hover:bg-gray-100">
+                    icon={iconHelper(service.name)}
+                  />
+                ))}
+              </div>
+            </Tab.Panel>
+          ))}
+        </Tab.Panels>
+      </Tab.Group>
+      <div className="h-16"></div>
+    </div>
+  )
+}
+
+{
+  /* <div className="flex items-center p-4 text-gray-800 border rounded-lg cursor-pointer hover:bg-gray-100">
                       <div className="w-6 h-6 sm:text-2xl">
                         {iconHelper(service.name)}
                       </div>
@@ -67,15 +84,5 @@ export default function Tabs() {
                           {service.shortDescription}
                         </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </Tab.Panel>
-          ))}
-        </Tab.Panels>
-      </Tab.Group>
-      <div className="h-16"></div>
-    </div>
-  )
+                    </div> */
 }

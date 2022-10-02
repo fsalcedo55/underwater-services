@@ -1,16 +1,43 @@
 export const nestedServices = {
   "Boat Maintenance": [
     {
+      name: "Hull Cleaning",
+      paramName: "hull-cleaning",
+      icon: "<MdCleaningServices />",
+      href: "/services/hull-cleaning",
+      heroPhoto: "/hull-cleaning-hero.jpg",
+      photo: "/hull_cleaning.jpeg",
+      photo2: "/hull-cleaning-1.jpg",
+      photo3: "/fiberglass-repair.jpeg",
+      description: {
+        Overview:
+          "We offer boat hull cleaning services in South Florida. We have been providing boat hull cleaning services in Miami-Dade, Broward, and Monroe County for the last 20 years. Our company specializes in boat hull cleaning, and we provide a wide range of boat hull cleaning services including inboard and outboard, monohulls, catamarans. Our experienced divers use only the best equipment to ensure that your boat hull is cleaned properly and thoroughly.",
+        "Critical for Speed Performance":
+          "A boat hull is a critical piece of equipment that is responsible for improving the cruising speed performance and reducing fuel costs. A clean boat hull is not only aesthetically pleasing, but it also helps keep the boat afloat and safe.",
+        "Structural Fiberglass Repairs":
+          "We provide structural fiberglass repairs that are meant to strengthen the integrity of the vessel. These repairs are done to prevent future leaks and cracks. A common method of repairing fiberglass that we use is a patch repair using epoxy which hardens upon contact with water and forms a strong bond with the fiberglass.",
+      },
+      shortDescription: "Hull cleaning, zincs replacement, polish...",
+    },
+    {
       name: "Propellers",
       paramName: "propellers",
       icon: "<GiBoatPropeller />",
       href: "/services/propellers",
-      photo: "/propeller.jpg",
+      heroPhoto: "/propellers-hero.jpeg",
+      photo: "/propeller-2.jpg",
+      photo2: "/propeller-1.jpg",
+      photo3: "/propeller-4.jpg",
+      photo4: "/propellers.jpg",
       description: {
-        1: "Boat propellers are a critical piece of equipment that is often overlooked when installing a boat motor. If not installed properly, they can cause serious damage to the engine and even lead to catastrophic failure. In addition, if they are removed improperly, they may break off and become lodged inside the engine, causing further damage.",
-        2: "Propeller installation is the first step in getting your boat motor running. Properly installing a boat propeller requires a few steps. First, make sure that the propeller is securely attached to the shaft of the motor. Next, ensure that the propeller is aligned correctly with the direction of rotation of the engine. Finally, tighten the bolts that hold the propeller onto the shaft.",
-        3: "Removing a boat propeller is much easier than installing it. Simply turn the ignition switch to the “off” position and remove the spark plug wires. Once the engine is shut down, loosen the nuts holding the propeller in place and pull it out. Be careful not to lose any pieces!",
-        4: "Reconditioning and repairing boat propellers is a service we offer. We use our experience and knowledge to repair damaged propellers and make them work again. If your propeller is broken, we can replace it with a brand new one.",
+        Overview:
+          "Boat propellers are a critical piece of equipment that is often overlooked. If not installed properly, they can cause serious damage to the engine and the transmission and even lead to costly repairs. In addition, if they are not properly installed by trained personnel, they may cause further damage. We specialize in boat propeller installation and removal services.",
+        Removal:
+          "For whatever reason you'd like to remove your boat propeller, we're here to help. Our professional divers can safely and efficiently remove your boat propeller and transport it the shop to be repaired and/or balanced.",
+        Installation:
+          "We can professionally install your new or repaired boat propeller so you can get back on the water as soon as possible",
+        "Recondition and Repair":
+          "Reconditioning and repairing boat propellers is a service we offer. We use our experience and knowledge to repair damaged propellers and make them work again. If your propeller is broken, we can replace it with a brand new one. We offer balancing to boat propellers.",
       },
       shortDescription: "Installation, removal, polishing...",
     },
@@ -20,30 +47,39 @@ export const nestedServices = {
       paramName: "underwater-inspections",
       icon: "<IoMdBoat />",
       href: "/services/underwater-inspections",
+      heroPhoto: "/underwater-inspections-hero.jpg",
       photo: "/diver.jpg",
-      description:
-        "1. Underwater Inspection Services for Boats \n Underwater inspections are performed by trained professionals who use their expertise to inspect the hull, deck, bilge, engine room, and interior compartments of a boat. These inspections are done to identify any potential problems before they become major issues. There are many different types of inspections that may be conducted including visual inspections, water quality tests, and pressure testing. \n 2. Visual Inspections \n Visual inspections are the most basic type of inspection and involve looking at the exterior of the boat. A trained professional will look for any visible damage or defects that could lead to future problems. Common things that are inspected include the hull, decks, propeller shaft, rudder, and rigging. \n 3. Water Quality Tests \n Water quality tests are used to test the water inside the boat. The purpose of these tests is to determine if there are any contaminants present in the water that could cause harm to the boat. These tests are often conducted after a storm or heavy rain event. \n 4. Pressure Testing \n Pressure testing is used to measure the amount of pressure exerted on the hull of the boat. This information is useful in determining how well the boat is built and whether or not it is structurally sound. \n 5. Boat Repairs \n Boat repairs are necessary for any boat that is older than 10 years old. If the boat does not have any structural damage, then repairs are only necessary if the boat is leaking. Leaks can occur due to worn out parts, faulty components, or poor maintenance. \n 6. Boat Maintenance \n Boat maintenance includes regular cleaning and lubrication of the various parts of the boat. This helps prevent corrosion and keeps the boat running smoothly.",
-      shortDescription: "Installation & Removal",
+      photo2: "/underwater_inspections.jpg",
+      photo3: "/underwater_inspections-3.jpg",
+      photo4: "/underwater_inspections-4.jpg",
+      description: {
+        Overview:
+          "Underwater inspections are performed by our professional divers who inspect the integrity of the hull of the boat underwater. These inspections are done to determine if any damage has occurred to the hull. Our divers use a variety of tools to perform these inspections including cameras to provide you with photos and video. We also provide inspections for insurance and repair evaluations",
+        "Hull Inspections":
+          "Hull inspection is the process of inspecting the exterior of a vessel's hull to ensure its structural integrity. A hull inspection is often performed after a collision or other incident where damage may have been sustained.",
+        "Marine Survey":
+          "A marine survey is a comprehensive evaluation of a boat's condition. Our surveyor will examine the boat's structure, mechanical systems, navigation equipment, and safety features. We will also check the boat's documentation and registration papers.",
+        "Boat Condition Assessment":
+          "A boat condition assessment is a detailed analysis of a boat's condition and is conducted by our professional marine surveyor. The assessment will identify problems with the boat's hull, decks, rigging, engines, steering system, and other parts.",
+      },
+      shortDescription: "Hull inspections, marine survey, assessment...",
     },
+
     {
-      name: "Bottom Cleaning",
-      paramName: "bottom-cleaning",
-      icon: "<MdCleaningServices />",
-      href: "/services/bottom-cleaning",
-      photo: "/hull_cleaning.jpeg",
-      description:
-        "Boat cleaning services are offered by boat owners who want to make sure their boat looks its best at all times. These services often involve deep cleaning of the hull and interior of the boat, including removing stains and dirt. Boat cleaning services are not only good for boats, they are also great for people who love boating. If you own a boat, then you know how much time and money goes into maintaining it. You may have spent hundreds if not thousands of dollars just to get your boat looking nice. A boat cleaning service can help you save money and time while making sure your boat looks beautiful.",
-      shortDescription: "Hull cleaning, zincs replacement, polish...",
-    },
-    {
-      name: "Structural Fiberglass Repairs",
-      paramName: "structural-fiberglass-repairs",
-      icon: "<GiGlassBall />",
-      href: "/services/structural-fiberglass-repairs",
-      photo: "/fiberglass-repair.jpeg",
-      description:
-        "1. What is structural fiberglass? \n Fiberglass is a man-made material composed of glass fibers held together by a resin matrix. It is commonly used in boat construction due to its durability and high tensile strength. \n 2. How do I know if my boat needs repairs? \n If your boat is leaking, then you need to get it repaired immediately. If the leak is minor, then you may not notice any damage until after the repair is complete. However, if the leak is severe, then you should have it inspected before the repair begins. \n 3. What are some common problems with fiberglass? \n The most common problem with fiberglass is cracking. Cracks occur when the resin matrix breaks down over time. This causes the fibers to separate from each other and weaken the structure. Another common problem is delamination. Delamination occurs when the resin separates from the surface of the fiberglass. This weakens the bond between the fiberglass and the resin. \n 4. What does the term 'structural' mean? \n A structural repair is a repair that is meant to strengthen the integrity of the vessel. These repairs are done to prevent future leaks and cracks. \n 5. What are some common methods of repairing fiberglass? \n There are many different ways to repair fiberglass depending on the type of crack. A patch repair is the easiest method of repairing a small crack. Patching involves cutting out a section of damaged area and replacing it with a piece of fiberglass that matches the original color. A patch repair is best suited for small cracks. \n Another way to repair fiberglass is to use epoxy. Epoxy is a two-part resin that hardens upon contact with water. Epoxy is used to fill larger holes and cracks. Epoxy is often applied using a brush or sprayer. Once cured, the epoxy forms a strong bond with the fiberglass.",
-      shortDescription: "Installation & Removal",
+      name: "Cathodic Protection",
+      paramName: "cathodic-protection",
+      icon: "<GiMetalDisc />",
+      href: "/services/cathodic-protection",
+      heroPhoto: "/cathodic-protection-hero.jpeg",
+      photo: "/cathodic-protection.jpeg",
+      photo2: "/cathodic-protection-2.jpeg",
+      description: {
+        Overview:
+          "Cathodic protection is a method of preventing corrosion of metals exposed to water. Cathodic protection involves applying a voltage between two electrodes placed at opposite ends of a metal object. A current flows from the negative electrode (anode) to the positive electrode (cathode). The flow of electrons creates a protective layer of oxide over the surface of the metal.",
+        "Purpose of Using Cathodic Protection":
+          "The purpose of using cathodic protection is to prevent corrosion of steel hulls, iron parts, and aluminum components. Cathodic protection systems are commonly installed on boat hulls and propellers.",
+      },
+      shortDescription: "Zincs replacement, electrolysis...",
     },
   ],
   "Waterfront Maintenance": [
@@ -52,45 +88,39 @@ export const nestedServices = {
       paramName: "seawall-maintenance",
       icon: "<GiBrickWall />",
       href: "/services/seawall-maintenance",
+      heroPhoto: "/seawall-hero.png",
       photo: "/Seawall-Repair.png",
-      description:
-        "Seawalls are structures built along the shoreline to prevent erosion and protect the land from storm surges. These structures are often made of concrete, stone, or steel. In some cases, seawalls may be constructed using vegetation, such as sea grasses. There are many different types of seawalls, including breakwaters, groynes, jetties, and revetments.",
+      photo2: "/seawall-2.jpeg",
+      description: {
+        Overview:
+          "In particular for Florida residents with waterfront properties, moisture intrusion is a typical issue. A strong, well-built seawall is crucial for the protection of your property if you live near the water. A seawall acts as the first line of defense against erosion in the face of natural soil erosion, hurricanes and other severe storms, and increasing sea levels. This makes the service of seawall repair, also known as bulkhead repair, crucial when there is a problem.",
+        "Seawall Repair":
+          "The skilled specialists at Seamaster Marine Repair are what you need if you need seawall or bulkhead repair in Florida. We have the knowledge and tools necessary to tackle all of your seawall repair requirements thanks to our many years of experience and remarkable understanding of the Florida climate. We can do inspections, joint repair, pressure cleaning, paint, etc.",
+      },
       shortDescription:
         "Inspections, maintenance, photos and video, repairs...",
     },
     {
-      name: "Docks",
-      paramName: "docks",
+      name: "Docks and Pilings",
+      paramName: "docksandpilings",
       icon: "<GiWoodBeam />",
-      href: "/services/docks",
+      href: "/services/docksandpilings",
+      heroPhoto: "/docks-and-pilings-hero.jpeg",
       photo: "/deck.jpeg",
+      photo2: "/pilings.png",
+      photo3: "/seawall-3.jpeg",
+      photo4: "/composite-dock-build.jpeg",
       description: {
-        1: "Waterproofing is the process of sealing cracks and holes in concrete decks. Cracks and holes can cause water damage to wood and other materials underneath. If left unrepaired, they could lead to rot and mold.",
-        2: "Deck cleaning involves removing dirt, debris, and grime from the surface of the deck. A professional deck cleaner uses special equipment to remove these contaminants. \n 3. Deck staining \n Staining is the process of applying color to the surface of a wooden deck. There are many different types of stains available, including oil-based stains, latex-based stains, and acrylic-based stains. \n 4. Deck painting \n Painting a deck requires the use of specialized tools and techniques. Professional painters have access to high-quality paint supplies and equipment. \n 5. Deck repair \n Repairing a damaged deck is similar to repairing any other type of wood. You'll need to cut out the damaged area, fill the hole with wood filler, sand down the edges, apply stain or sealer, and then apply two coats of clear finish.",
-        3: "",
-        4: "",
+        Overview:
+          "Waterproofing is the process of sealing cracks and holes in concrete decks. Cracks and holes can cause water damage to wood and other materials underneath. If left unrepaired, they could lead to rot and mold.",
+        Installations:
+          "We have been installing waterfront docks in South Florida for over 20 years.",
+        Inspections:
+          "We can perform inspections on your docks to check their structural integrity.",
+        Repair:
+          "If any repairs required for your dock, our experienced staff can efficiently perform them.",
       },
       shortDescription: "Repairs, maintenance, pressure clean...",
-    },
-    {
-      name: "Dredging and Rock Removal",
-      paramName: "dredging-and-rock-removal",
-      icon: "<GiFallingRocks />",
-      href: "/services/dredging-and-rock-removal",
-      photo: "/underwater-dredging-melbourne-1.jpeg",
-      description:
-        "Ocean dredging is the act of removing sediment from the bottom of the ocean floor. Sediment is a mixture of sand, rocks, shells, and other materials that have fallen to the bottom of the ocean. Sediment helps create the foundation of the ocean floor, and without it, the ocean would lose much of its value as a habitat for marine life. Ocean dredging is done by machines that drag chains across the ocean floor. As the machine moves forward, it scrapes away the sediment and deposits it onto barges.",
-      shortDescription: "Dredgding, erosion control... ",
-    },
-    {
-      name: "Pilings",
-      paramName: "pilings",
-      icon: "<GiAncientColumns />",
-      href: "/services/pilings",
-      photo: "/pilings.png",
-      description:
-        "Ocean dredging is the act of removing sediment from the bottom of the ocean floor. Sediment is a mixture of sand, rocks, shells, and other materials that have fallen to the bottom of the ocean. Sediment helps create the foundation of the ocean floor, and without it, the ocean would lose much of its value as a habitat for marine life. Ocean dredging is done by machines that drag chains across the ocean floor. As the machine moves forward, it scrapes away the sediment and deposits it onto barges.",
-      shortDescription: "Repairs, restoration, encapsulation... ",
     },
   ],
 }

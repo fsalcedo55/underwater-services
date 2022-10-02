@@ -1,7 +1,7 @@
 import {
   GiBoatPropeller,
   GiBrickWall,
-  GiGlassBall,
+  GiMetalDisc,
   GiFallingRocks,
   GiWoodBeam,
   GiAncientColumns,
@@ -19,23 +19,17 @@ export const iconHelper = (serviceName) => {
     case "Underwater Inspections":
       icon = <IoMdBoat />
       break
-    case "Bottom Cleaning":
+    case "Hull Cleaning":
       icon = <MdCleaningServices />
       break
-    case "Structural Fiberglass Repairs":
-      icon = <GiGlassBall />
+    case "Cathodic Protection":
+      icon = <GiMetalDisc />
       break
     case "Seawall Maintenance":
       icon = <GiBrickWall />
       break
-    case "Docks":
+    case "Docks and Pilings":
       icon = <GiWoodBeam />
-      break
-    case "Dredging and Rock Removal":
-      icon = <GiFallingRocks />
-      break
-    case "Pilings":
-      icon = <GiAncientColumns />
       break
     default:
       icon = <GiBoatPropeller />

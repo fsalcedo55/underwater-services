@@ -3,11 +3,11 @@
 
 @layer components {
     .nav-button {
-        @apply text-gray-700 rounded hover:text-white hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 lg:p-2 
+        @apply text-gray-700 rounded hover:text-white hover:bg-primary active:bg-primary-focus focus:outline-none focus:ring focus:ring-blue-300 lg:p-2 
     }
 
     .dropdown-nav-button {
-        @apply block py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 hover:text-white text-xl
+        @apply block py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-primary active:bg-primary-focus focus:outline-none focus:ring focus:ring-blue-300 hover:text-white text-xl
     }
 }
 

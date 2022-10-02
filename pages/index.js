@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Contact from "../components/contact"
 import Tabs from "../components/tabs"
-import coverPhoto from ".././public/cover-photo.jpg"
+import coverPhoto from ".././public/miami-ys.jpeg"
 import bottomHero from ".././public/bottomhero-long.jpg"
 import Link from "next/link"
 
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
         </div> */}
         {/* <div className="flex items-center justify-center h-24 my-12 bg-gradient-to-l from-cyan-500 to-blue-800">
-          <div className="flex flex-row text-3xl font-bold text-white">
+          <div className="flex flex-row text-2xl font-bold text-white">
             <p className="px-24">Reliable</p>
             <p className="px-24">Experienced</p>
             <p className="px-24">High-Quality</p>
@@ -73,7 +73,7 @@ export default function Home() {
               needs
             </h1>
             <Link href="/#services">
-              <button className="text-white normal-case btn btn-primary btn-lg bg-gradient-to-l from-cyan-500 to-blue-500">
+              <button className="text-white normal-case btn btn-primary btn-lg bg-gradient-to-l from-primary to-primary-focus">
                 Check out some of our services
               </button>
             </Link>
@@ -81,7 +81,34 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hidden h-24 md:block min-w-screen bg-gradient-to-t from-cyan-500 to-blue-800"></div>
+      {/* <div className="hidden h-24 md:block min-w-screen bg-gradient-to-t from-cyan-500 to-blue-800"> */}
+      <section className="hidden text-gray-300 md:block body-font bg-gradient-to-t from-cyan-500 to-blue-800">
+        <div className="container px-5 py-3 mx-auto">
+          <div className="flex justify-around text-center">
+            <div className="w-1/3 p-4">
+              <h2 className="text-2xl font-semibold text-white title-font">
+                Areas Served
+              </h2>
+              <p className="leading-relaxed">Miami-Dade, Broward, Monroe</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <h2 className="text-2xl font-semibold text-white title-font">
+                24/7
+              </h2>
+              <p className="leading-relaxed">Emergency Services</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <h2 className="text-2xl font-semibold text-white title-font">
+                Certified Commercial Divers
+              </h2>
+              <p className="leading-relaxed">
+                Association of Diving Contractors
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* </div> */}
       <section id="services">
         <div className="block h-12 min-w-screen"></div>
         <Tabs />

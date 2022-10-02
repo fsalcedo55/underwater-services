@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme")
 module.exports = {
   daisyui: {
     themes: [
       {
         mytheme: {
-          primary: "#44ADEE",
+          primary: "#004AAC",
 
           secondary: "#E9498C",
 
@@ -30,7 +31,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [require("daisyui"), require("tailwindcss-animate")],
 }
