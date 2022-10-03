@@ -47,7 +47,7 @@ function Contact() {
         }),
       })
     } catch (error) {
-      toast.error("Error: Please email fersaldiver@hotmail.com", {
+      toast.error("Error: Please email seamastermarinerepair@gmail.com", {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,

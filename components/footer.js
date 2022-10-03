@@ -34,7 +34,7 @@ export default function Footer() {
         <div>
           <span className="footer-title">Contact</span>
           <p className="link link-hover">Text or Call: (305) 772-9065</p>
-          <p className="link link-hover">fersaldiver@gmail.com</p>
+          <p className="link link-hover">seamastermarinerepair@gmail.com</p>
           <div className="relative w-8 h-11">
             <Image src="/adci.png" alt="adci" layout="fill" />
           </div>
