@@ -75,22 +75,22 @@ export default function Home() {
       </div>
 
       {/* <div className="hidden h-24 md:block min-w-screen bg-gradient-to-t from-cyan-500 to-blue-800"> */}
-      <section className="hidden text-gray-300 md:block body-font bg-gradient-to-t from-cyan-500 to-blue-800">
+      <section className="block text-gray-300 body-font bg-gradient-to-t from-cyan-500 to-blue-800">
         <div className="container px-5 py-3 mx-auto">
-          <div className="flex justify-around text-center">
-            <div className="w-1/3 p-4">
+          <div className="flex flex-col text-center md:justify-around md:flex-row">
+            <div className="p-4 md:w-1/3">
               <h2 className="text-2xl font-semibold text-white title-font">
                 Areas Served
               </h2>
               <p className="leading-relaxed">Miami-Dade, Broward, Monroe</p>
             </div>
-            <div className="w-1/3 p-4">
+            <div className="p-4 md:w-1/3">
               <h2 className="text-2xl font-semibold text-white title-font">
                 24/7
               </h2>
               <p className="leading-relaxed">Emergency Services</p>
             </div>
-            <div className="w-1/3 p-4">
+            <div className="p-4 md:w-1/3">
               <h2 className="text-2xl font-semibold text-white title-font">
                 Certified Commercial Divers
               </h2>
