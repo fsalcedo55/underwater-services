@@ -10,7 +10,7 @@ export default function Card({
 }) {
   return (
     <Link href={href}>
-      <div className="relative w-full transition duration-300 ease-in-out cursor-pointer hover:shadow-lg card bg-base-100 image-full lg:hover:-translate-y-2 active:scale-75">
+      <div className="relative w-full transition duration-300 ease-in-out cursor-pointer hover:shadow-lg card bg-base-100 image-full lg:hover:-translate-y-2 lg:active:scale-95">
         <figure>
           <Image
             src={image}
