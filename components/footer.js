@@ -35,6 +35,9 @@ export default function Footer() {
           <span className="footer-title">Contact</span>
           <p className="link link-hover">Text or Call: (305) 772-9065</p>
           <p className="link link-hover">fersaldiver@gmail.com</p>
+          <div className="relative w-8 h-11">
+            <Image src="/adci.png" alt="adci" layout="fill" />
+          </div>
         </div>
       </footer>
       <footer className="px-10 py-4 border-t footer bg-base-200 text-base-content border-base-300">
@@ -97,9 +100,6 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-        </div>
-        <div className="relative w-8 h-11">
-          <Image src="/adci.png" alt="adci" layout="fill" />
         </div>
       </footer>
     </div>
