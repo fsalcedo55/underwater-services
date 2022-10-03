@@ -286,14 +286,14 @@ export default async function handler(req, res) {
 
   const msgToClient = {
     to: req.body.email,
-    from: "fsalcedo55@hotmail.com", // Use the email address or domain you verified above
+    from: "seamastermarinerepair@gmail.com", // Use the email address or domain you verified above
     subject: `Seamaster: Thanks for your inquiry, ${req.body.fullname}!`,
     html: messageToClient,
   }
 
   const msgToMe = {
     to: "seamastermarinerepair@gmail.com",
-    from: "fsalcedo55@hotmail.com", // Use the email address or domain you verified above
+    from: "seamastermarinerepair@gmail.com", // Use the email address or domain you verified above
     subject: `Seamaster: You have a new inquiry from ${req.body.fullname}!`,
     html: messageToClient,
   }
@@ -310,8 +310,8 @@ export default async function handler(req, res) {
 // async function sendEmail(req, res) {
 //   try {
 //     await sendgrid.send({
-//       to: "fsalcedo55@hotmail.com",
-//       from: "fsalcedo55@hotmail.com",
+//       to: "seamastermarinerepair@gmail.com",
+//       from: "seamastermarinerepair@gmail.com",
 //       subject: `You've received an email from ${req.body.fullname}`,
 //       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 //       <html lang="en">
