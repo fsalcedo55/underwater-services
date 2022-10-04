@@ -32,7 +32,10 @@ const ServicePage = ({ currService }) => {
     <div>
       <Head>
         <title>{currService?.name}</title>
-        <meta name={currService?.name} content="Seamaster Marine Repair" />
+        <meta
+          name="description"
+          content={`At Seamaster Marine Repair, we provide ${currService?.name} services in Miami, Broward, and Monroe. Our professional divers have plenty of experience to perform the job succesfully.`}
+        />
       </Head>
       <section className="overflow-hidden text-gray-600 body-font">
         {/* <div className="flex items-center justify-center h-24 text-center bg-gradient-to-r from-primary to-primary-focus">

@@ -11,8 +11,8 @@ export default function Home() {
       <Head>
         <title>Seamaster Marine Repair</title>
         <meta
-          name="Seamaster Marine Repair takes care of your underwater needs in Miami-Dade, FL and Broward, FL. We have over 25 years of experience servicing marine vessels."
-          content="Seamaster Marine Repair"
+          name="Description"
+          content="Seamaster Marine Repair takes care of your underwater needs in Miami-Dade, FL and Broward, FL. We have over 25 years of experience servicing marine vessels."
         />
       </Head>
 
