@@ -181,18 +181,18 @@ function Contact() {
                   className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                 >
                   <option></option>
-                  <option value="propellers">Propellers</option>
-                  <option value="hullCleaning">Hull Cleaning</option>
-                  <option value="underwaterInspections">
+                  <option value="Propellers">Propellers</option>
+                  <option value="Hull Cleaning">Hull Cleaning</option>
+                  <option value="Underwater Inspections">
                     Underwater Inspections
                   </option>
-                  <option value="cathodicProtection">
+                  <option value="Cathodic Protection">
                     Cathodic Protection
                   </option>
-                  <option value="seaWallMaintenance">
+                  <option value="SeaWall Maintenance">
                     Seawall Maintenance
                   </option>
-                  <option value="docksandpilings">Docks and Pilings</option>
+                  <option value="Docks and Pilings">Docks and Pilings</option>
                 </select>
               </div>
             </div>
