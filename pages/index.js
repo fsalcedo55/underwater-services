@@ -4,6 +4,7 @@ import Tabs from "../components/tabs"
 import coverPhoto from ".././public/miami-ys.jpeg"
 import bottomHero from ".././public/bottomhero-long.jpg"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -16,8 +17,8 @@ export default function Home() {
         />
       </Head>
 
-      <main className="lg:flex lg:justify-center">
-        {/* <div className="lg:container flex flex-col py-14 space-y-6 lg:h-[38rem] lg:py-16 lg:flex-row lg:items-center">
+      {/* <main className="lg:flex lg:justify-center">
+        <div className="lg:container flex flex-col py-14 space-y-6 lg:h-[38rem] lg:py-16 lg:flex-row lg:items-center">
           <div className="w-full lg:w-1/2 lg:mx-3">
             <div className="lg:max-w-2xl">
               <div className="flex flex-col text-center">
@@ -45,17 +46,26 @@ export default function Home() {
               className="rounded-lg"
             />
           </div>
-        </div> */}
-      </main>
-      <div
+        </div>
+      </main> */}
+      {/* <div
         className="min-h-screen hero"
         style={{
           backgroundImage: `url(${coverPhoto.src})`,
           width: "100%",
           height: "100%",
         }}
-      >
-        <div className="hero-overlay bg-opacity-60"></div>
+      > */}
+      <div className="relative min-h-screen hero">
+        <Image
+          alt="Miami Underwater Services"
+          src={coverPhoto.src}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="opacity-20"
+        />
+        <div className="bg-sky-900 hero-overlay bg-opacity-90"></div>
         <div className="text-center hero-content text-neutral-content">
           <div className="max-w-4xl">
             <h1 className="mb-16 text-5xl font-semibold text-white sm:text-8xl">
