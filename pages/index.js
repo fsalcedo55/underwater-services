@@ -63,9 +63,9 @@ export default function Home() {
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="opacity-20"
+          className="opacity-30"
         />
-        <div className="bg-sky-900 hero-overlay bg-opacity-90"></div>
+        <div className="bg-slate-900 hero-overlay bg-opacity-90"></div>
         <div className="text-center hero-content text-neutral-content">
           <div className="max-w-4xl">
             <h1 className="mb-16 text-5xl font-semibold text-white sm:text-8xl">

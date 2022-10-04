@@ -120,14 +120,14 @@ function Contact() {
                   className="text-sm leading-7 text-gray-600"
                 >
                   Full Name
+                  <input
+                    required
+                    type="text"
+                    value={fullname}
+                    onChange={(e) => setFullname(e.target.value)}
+                    className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                  />
                 </label>
-                <input
-                  required
-                  type="text"
-                  value={fullname}
-                  onChange={(e) => setFullname(e.target.value)}
-                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
-                />
               </div>
             </div>
             <div className="p-2 sm:w-1/2">
@@ -137,14 +137,14 @@ function Contact() {
                   className="text-sm leading-7 text-gray-600"
                 >
                   Email
+                  <input
+                    required
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                  />
                 </label>
-                <input
-                  required
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
-                />
               </div>
             </div>
             <div className="p-2 sm:w-1/2">
@@ -154,14 +154,14 @@ function Contact() {
                   className="text-sm leading-7 text-gray-600"
                 >
                   Phone Number
+                  <input
+                    required
+                    type="tel"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                  />
                 </label>
-                <input
-                  required
-                  type="tel"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
-                />
               </div>
             </div>
             <div className="p-2 sm:w-1/2">
@@ -171,29 +171,28 @@ function Contact() {
                   className="text-sm leading-7 text-gray-600"
                 >
                   Which service are you interested in?
+                  <select
+                    required
+                    type="service"
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
+                    className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                  >
+                    <option></option>
+                    <option value="Propellers">Propellers</option>
+                    <option value="Hull Cleaning">Hull Cleaning</option>
+                    <option value="Underwater Inspections">
+                      Underwater Inspections
+                    </option>
+                    <option value="Cathodic Protection">
+                      Cathodic Protection
+                    </option>
+                    <option value="SeaWall Maintenance">
+                      Seawall Maintenance
+                    </option>
+                    <option value="Docks and Pilings">Docks and Pilings</option>
+                  </select>
                 </label>
-
-                <select
-                  required
-                  type="service"
-                  value={service}
-                  onChange={(e) => setService(e.target.value)}
-                  className="w-full h-12 px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
-                >
-                  <option></option>
-                  <option value="Propellers">Propellers</option>
-                  <option value="Hull Cleaning">Hull Cleaning</option>
-                  <option value="Underwater Inspections">
-                    Underwater Inspections
-                  </option>
-                  <option value="Cathodic Protection">
-                    Cathodic Protection
-                  </option>
-                  <option value="SeaWall Maintenance">
-                    Seawall Maintenance
-                  </option>
-                  <option value="Docks and Pilings">Docks and Pilings</option>
-                </select>
               </div>
             </div>
             <div className="w-full p-2">
@@ -238,13 +237,13 @@ function Contact() {
                   className="text-sm leading-7 text-gray-600"
                 >
                   Tell us more about your project
+                  <textarea
+                    required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none resize-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+                  ></textarea>
                 </label>
-                <textarea
-                  required
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-200 bg-opacity-50 border-2 border-gray-300 rounded-lg outline-none resize-none focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
-                ></textarea>
               </div>
             </div>
             <div className="w-full p-2">
