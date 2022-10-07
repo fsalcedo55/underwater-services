@@ -48,7 +48,7 @@ function Navbar() {
             </div>
             <div className="hidden lg:block">
               <div className="flex ml-10 space-x-4">
-                <ul className="flex flex-col items-center md:flex-row md:space-x-8 md:text-md md:font-medium">
+                <ul className="flex flex-col items-center font-semibold md:flex-row md:space-x-8 md:text-md">
                   <li className="cursor-pointer">
                     <Link href="/">
                       <a className="nav-button">Home</a>
@@ -140,7 +140,7 @@ function Navbar() {
         {(ref) => (
           <div className="lg:hidden" id="mobile-menu">
             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
+              <ul className="flex flex-col mt-4 font-semibold md:flex-row md:space-x-8 md:mt-0 md:text-md">
                 <li className="dropdown-nav-button">
                   <Link href="/">
                     <a onClick={handleClick}>Home</a>

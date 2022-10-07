@@ -49,10 +49,10 @@ export default function DropdownMenu() {
                     } block px-4 py-3 rounded-lg`}
                   >
                     <a className="flex items-center gap-2">
-                      <span className="text-2xl">
+                      <span className="text-xl">
                         {iconHelper(service.name)}
                       </span>
-                      <span className="text-xl md:text-sm">{service.name}</span>
+                      <span className="font-light text-md">{service.name}</span>
                     </a>
                   </div>
                 )}
