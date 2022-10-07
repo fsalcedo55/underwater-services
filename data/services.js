@@ -17,7 +17,7 @@ export const nestedServices = {
         "Structural Fiberglass Repairs":
           "We provide structural fiberglass repairs that are meant to strengthen the integrity of the vessel. These repairs are done to prevent future leaks and cracks. A common method of repairing fiberglass that we use is a patch repair using epoxy which hardens upon contact with water and forms a strong bond with the fiberglass.",
       },
-      shortDescription: "Hull cleaning, zincs replacement, polish...",
+      shortDescription: "Hull cleaning, paint, bottom cleaning...",
     },
     {
       name: "Propellers",
