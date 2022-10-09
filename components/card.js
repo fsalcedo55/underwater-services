@@ -13,7 +13,7 @@ export default function Card({
   return (
     <Link href={href} className="hover:drop-shadow-lg">
       <div className="w-full transition duration-300 ease-in-out cursor-pointer card card-compact bg-gradient-to-r from-primary to-blue-900 lg:hover:scale-[1.02] lg:active:scale-95 shadow-primary">
-        <div className="h-36 md:h-48">
+        <div className="h-24 sm:h-40 md:h-42">
           <div
             className="min-h-full hero"
             style={{

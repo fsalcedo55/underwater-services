@@ -47,7 +47,7 @@ const ServicePage = ({ currService }) => {
             {currService?.name} in Miami
           </h1>
         </div> */}
-        <div className="md:h-96">
+        <div className="h-48 sm:h-96">
           <div
             className="min-h-full hero"
             style={{
@@ -60,7 +60,7 @@ const ServicePage = ({ currService }) => {
             <div className="bg-blue-400 bg-opacity-70 hero-overlay"></div>
             <div className="text-center hero-content text-neutral-content">
               <div className="max-w-4xl">
-                <h1 className="text-2xl font-semibold text-white sm:text-8xl">
+                <h1 className="text-4xl font-semibold text-white sm:text-8xl">
                   {currService?.name} in Miami
                 </h1>
               </div>

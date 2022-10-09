@@ -108,7 +108,7 @@ function Contact() {
             Let&apos;s get you back on the water as soon as possible
           </p>
         </div>
-        <div className="mx-auto lg:w-1/2 md:w-2/3">
+        <div className="mx-auto w-xl lg:w-[60rem]">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col flex-wrap -m-2 sm:flex-row"

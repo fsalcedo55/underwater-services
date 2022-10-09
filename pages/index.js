@@ -17,7 +17,7 @@ export default function Home() {
         />
       </Head>
 
-      <div className="relative min-h-screen hero">
+      <div className="relative h-[27rem] sm:min-h-screen hero">
         <Image
           alt="Miami Underwater Services"
           src={coverPhoto.src}
@@ -82,7 +82,7 @@ export default function Home() {
         <Contact />
       </section>
       <div
-        className="min-h-screen hero"
+        className="h-[18rem] sm:min-h-screen hero"
         style={{
           backgroundImage: `url(${bottomHero.src})`,
           width: "100%",
@@ -91,7 +91,7 @@ export default function Home() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="text-center md:text-left hero-content text-neutral-content">
           <div className="max-w-8xl">
-            <h1 className="max-w-xl text-6xl text-white font-extralight md:mr-96 mb-96 sm:text-8xl">
+            <h1 className="max-w-xl mb-40 text-4xl text-white font-extralight md:mr-96 sm:mb-96 sm:text-8xl">
               We keep your boat afloat
             </h1>
           </div>
