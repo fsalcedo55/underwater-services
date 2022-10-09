@@ -27,6 +27,10 @@ export async function getStaticProps(context) {
   }
 }
 
+export function Divider() {
+  return <div className="my-10 divider"></div>
+}
+
 const ServicePage = ({ currService }) => {
   return (
     <div>
@@ -67,7 +71,7 @@ const ServicePage = ({ currService }) => {
         <div className="container px-5 py-12 mx-auto">
           {/* Content starts here */}
 
-          <div className="flex flex-col justify-center mx-auto lg:flex-row">
+          <div className="flex flex-col items-center justify-center mx-auto lg:flex-row">
             <div className="w-full mb-6 lg:w-1/2 lg:pr-10 lg:py-6 lg:mb-0">
               <div className="flex justify-center gap-2 mb-4 font-bold text-gray-900 lg:justify-start title-font">
                 <div className="text-3xl">{iconHelper(currService?.name)}</div>
@@ -101,11 +105,11 @@ const ServicePage = ({ currService }) => {
             </div>
           </div>
 
-          <div className="divider"></div>
+          <Divider />
 
           {/* Content starts here */}
 
-          <div className="flex flex-col-reverse justify-center mx-auto lg:flex-row">
+          <div className="flex flex-col-reverse items-center justify-center mx-auto lg:flex-row">
             <div className="flex justify-center">
               <Image
                 alt="miami boat propeller"
@@ -139,10 +143,11 @@ const ServicePage = ({ currService }) => {
 
           {currService?.photo3 && (
             <div>
-              <div className="divider"></div>
+              <Divider />
+
               {/* Content starts here */}
 
-              <div className="flex flex-col justify-center mx-auto lg:flex-row">
+              <div className="flex flex-col items-center justify-center mx-auto lg:flex-row">
                 <div className="w-full mb-6 lg:w-1/2 lg:pr-10 lg:py-6 lg:mb-0">
                   <div className="flex mb-4">
                     <a className="flex-grow px-1 py-2 text-2xl font-bold border-b-2 text-primary border-primary">
@@ -179,11 +184,11 @@ const ServicePage = ({ currService }) => {
 
           {currService?.photo4 && (
             <div>
-              <div className="divider"></div>
+              <Divider />
 
               {/* Content starts here */}
 
-              <div className="flex flex-col-reverse justify-center mx-auto lg:flex-row">
+              <div className="flex flex-col-reverse items-center justify-center mx-auto lg:flex-row">
                 <div className="flex justify-center">
                   <Image
                     alt="miami boat propeller"

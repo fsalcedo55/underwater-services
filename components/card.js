@@ -8,9 +8,11 @@ export default function Card({
   href,
   icon,
 }) {
+  // lg:hover:-translate-y-2
+
   return (
-    <Link href={href}>
-      <div className="w-full transition duration-300 ease-in-out cursor-pointer hover:shadow-lg card card-compact bg-gradient-to-r from-primary to-blue-900 lg:hover:-translate-y-2 lg:active:scale-95">
+    <Link href={href} className="hover:drop-shadow-lg">
+      <div className="w-full transition duration-300 ease-in-out cursor-pointer card card-compact bg-gradient-to-r from-primary to-blue-900 lg:hover:scale-[1.02] lg:active:scale-95 shadow-primary">
         <div className="h-36 md:h-48">
           <div
             className="min-h-full hero"
