@@ -202,7 +202,7 @@ export default async function handler(req, res) {
   <div style="font-family: inherit; text-align: center">${req.body.service}</div> 
   <div style="font-family: inherit; text-align: center">Your message:</div> 
   <div style="font-family: inherit; text-align: center">${req.body.message}</div> 
-      <div style="font-family: inherit; text-align: center; font-size: 12px">www.seamastermarinerepair.com</div> 
+      <div style="font-family: inherit; text-align: center; font-size: 14px"><a href="https://www.seamastermarinerepair.com/">www.seamastermarinerepair.com</a></div> 
       </div></td>
         </tr>
       </tbody>
