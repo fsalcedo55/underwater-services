@@ -196,6 +196,8 @@ export default async function handler(req, res) {
           <td style="padding:18px 30px 18px 30px; line-height:22px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="font-size: 18px">We will reply to you as soon as possible.</span><span style="font-size: 18px"></span></div>
   <div style="font-family: inherit; text-align: center">Your phone number:</div> 
   <div style="font-family: inherit; text-align: center">${req.body.phoneNumber}</div> 
+  <div style="font-family: inherit; text-align: center">Your email:</div> 
+  <div style="font-family: inherit; text-align: center">${req.body.email}</div> 
   <div style="font-family: inherit; text-align: center">Service requested:</div> 
   <div style="font-family: inherit; text-align: center">${req.body.service}</div> 
   <div style="font-family: inherit; text-align: center">Your message:</div> 
